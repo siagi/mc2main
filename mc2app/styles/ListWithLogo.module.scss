@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-top: 4rem;
+}
+.image{
+    border-radius: 0.5rem;
+}
+.companyName{
+    color:#004377;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 2.7rem;
+
+}
+.smallContainer{
+    display: flex;
+    color:#004377;
+    column-gap: 0.5rem;
+
+}
