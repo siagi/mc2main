@@ -1,3 +1,18 @@
+.list{
+display: flex;
+margin-bottom: 5.5rem;
+column-gap: 1.5rem;
+row-gap: 1rem;
+flex-wrap: wrap;
+flex-flow: row wrap;
+
+}
+// .list>:first-child{
+//     flex: none;
+// }
+.list>*{
+    flex: 1 1 48%;
+}
 .image{
     border-radius: 1rem;
 }
@@ -25,10 +40,22 @@
     row-gap: 0.5rem;
 }
 .data{
+    font-weight:700;
     padding-top: 1rem;
     display: flex;
     column-gap: 0.5rem;
-    color:#BDFF00;
+    color:#fff;
     font-size:1rem;
+    vertical-align: middle;
 
+}
+.button{
+    background-color: #BDFF00;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    border: none;
+
+    &:hover{
+        background-color: #fff;
+    }
 }

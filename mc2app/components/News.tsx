@@ -12,7 +12,7 @@ import calendar from '../public/calendaricon.svg'
 
 const News = () => {
   return (
-      <div>
+      <div className={styles.list}>
           {sampledata && sampledata.map((item,index)=>{
               return(
                     <div key={index} style={{width:'50%'}}>
@@ -24,7 +24,7 @@ const News = () => {
                         <div className={styles.dataAndTitle}>
                         
                             <div className={styles.data}>
-                                <Image src={calendar} height={18} width={18}/>
+                                <span><Image src={calendar} height={18} width={18}/></span>
                                 <span>{item.data}</span>
                             </div>
                             <div className={styles.descriptionTitle}>
@@ -35,6 +35,7 @@ const News = () => {
                         <div className={styles.description}>
                             {item.description}
                         </div>
+                            <hr/>
                     </div>
               )
           })}

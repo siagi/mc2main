@@ -26,6 +26,9 @@ const Home: NextPage = () => {
        <div className={styles.element}>
         <News/>
        </div>
+       <div className={styles.element}>
+        BIM
+       </div>
      </div>
     </div>
   )

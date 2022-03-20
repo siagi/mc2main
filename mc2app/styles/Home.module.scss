@@ -15,6 +15,11 @@
 .element{
   width: 33%;
 }
+.elementWithNews{
+  width: 33%;
+  display: flex;
+  
+}
 .set{
   display: flex;
   flex-direction: column;
