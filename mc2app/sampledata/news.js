@@ -24,9 +24,9 @@ const sampledata = [
         description:'Byliśmy odpowiedzialni za zaprojektowanie wszystkich instalacji HVAC oraz instalacji sanitarnych wewnątrz i na zewnątrz budynku.Instalacja ogrzewania,Instalacja chłodzenia,Instalacja wentylacji mechanicznej,Instalacje wody, kanalizacji oraz ciepłej wody użytkowej,Technologia źródła ciepła i chłodu,System wentylacji pożarowej – system różnicowania ciśnienia,Przyłącza wody, kanalizacji oraz ciepłownicze'
     },
     {
-        photo:"/photos/photo3.jpg",
+        photo:"/photos/photo4.png",
         width:1024,
-        height:749,
+        height:433,
         name:'Budynek Wadowicka 3',
         data:'2020-01-01',
         description:'Byliśmy odpowiedzialni za zaprojektowanie wszystkich instalacji HVAC oraz instalacji sanitarnych wewnątrz i na zewnątrz budynku.Instalacja ogrzewania,Instalacja chłodzenia,Instalacja wentylacji mechanicznej,Instalacje wody, kanalizacji oraz ciepłej wody użytkowej,Technologia źródła ciepła i chłodu,System wentylacji pożarowej – system różnicowania ciśnienia,Przyłącza wody, kanalizacji oraz ciepłownicze'
