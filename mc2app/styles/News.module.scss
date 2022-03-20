@@ -1,17 +1,17 @@
 .list{
-display: flex;
-margin-bottom: 5.5rem;
-column-gap: 1.5rem;
-row-gap: 1rem;
-flex-wrap: wrap;
-flex-flow: row wrap;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    margin-bottom: 5.5rem;
+    flex-wrap: wrap;
 
 }
-// .list>:first-child{
-//     flex: none;
-// }
+.list>:first-child{
+    flex: 1 1 100%;
+}
 .list>*{
     flex: 1 1 48%;
+    height: fit-content;
 }
 .image{
     border-radius: 1rem;
