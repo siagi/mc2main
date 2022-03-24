@@ -1,12 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Bim from '../components/Bim'
 import ListWithLogo from '../components/ListWithLogo'
 import News from '../components/News'
 import Topmenu from '../components/Topmenu'
 import styles from '../styles/Home.module.scss'
+import YouTube from "react-youtube";
+import { useRef, useState } from 'react'
 
 const Home: NextPage = () => {
+ const [background,setBackground] = useState(false);
+
   return (
     <div className={styles.container}>
      <div className={styles.main}>
@@ -27,7 +32,11 @@ const Home: NextPage = () => {
         <News/>
        </div>
        <div className={styles.element}>
-        BIM
+
+          <div>
+            <YouTube videoId='ScVBPAitibQ' className={styles.youtube}/>
+          </div>
+          <Bim/>
        </div>
      </div>
     </div>

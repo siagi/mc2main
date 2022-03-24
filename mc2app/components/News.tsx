@@ -34,9 +34,11 @@ const News = () => {
                         </div>
                         <div className={styles.description}>
                             {item.description}
+                            
                         </div>
-                            <hr/>
+                        <hr/>
                     </div>
+                    
               )
           })}
 
