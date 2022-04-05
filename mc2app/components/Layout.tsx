@@ -30,7 +30,6 @@ const Layout:FunctionComponent<{children:JSX.Element}> = ({children}) => {
             <Image src={insticon} width={24} height={24}/>
             <Image src={linkedicon} width={24} height={24}/>
           </div>
-a
         </footer>
  
   </div>

@@ -13,32 +13,43 @@ const Home: NextPage = () => {
  const [background,setBackground] = useState(false);
 
   return (
-    <div className={styles.container}>
-     <div className={styles.main}>
-       <div className={styles.element}>
-         <div className={styles.set}>
-          <div className={styles.header}>
-            MEP
+    <div>
+      <section id='news' className={styles.container}>
+        <div className={styles.box}>
+          <div className={styles.main}>
+            <div className={styles.element}>
+              <div className={styles.set}>
+                <div className={styles.header}>
+                  MEP
+                </div>
+                <div className={styles.subheader}>
+                  Mechanical Electrical & Plumbing
+                </div>
+              </div>
+              <div>
+                <ListWithLogo/>
+              </div>
+            </div>
+            <div className={styles.element}>
+              <News/>
+            </div>
+            <div className={styles.element}>
+                <div>
+                  <YouTube videoId='ScVBPAitibQ' className={styles.youtube}/>
+                </div>
+                <Bim/>
+            </div>
           </div>
-          <div className={styles.subheader}>
-            Mechanical Electrical & Plumbing
+        </div>
+      </section>
+      <section id='about' className={styles.container}>
+        <div className={styles.box}>
+          <div className={styles.main}>
+            {/* <div className={styles.title}>About</div> */}
+            ABOUTasdadasdasd
           </div>
-         </div>
-         <div>
-           <ListWithLogo/>
-         </div>
-       </div>
-       <div className={styles.element}>
-        <News/>
-       </div>
-       <div className={styles.element}>
-
-          <div>
-            <YouTube videoId='ScVBPAitibQ' className={styles.youtube}/>
-          </div>
-          <Bim/>
-       </div>
-     </div>
+        </div>
+      </section>
     </div>
   )
 }

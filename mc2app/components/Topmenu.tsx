@@ -5,8 +5,8 @@ import styles from '../styles/Topmenu.module.scss'
 const Topmenu:FunctionComponent = () => {
   return (
       <div className={styles.container}>
-          <div className={styles.element}>News</div>
-          <div className={styles.element}>About</div>
+          <a href="#news" className={styles.element}>News</a>
+          <a href="#about" className={styles.element}>About</a>
           <div className={styles.element}>Services</div>
           <div className={styles.element}>Projects</div>
           <div className={styles.element}>Career</div>
