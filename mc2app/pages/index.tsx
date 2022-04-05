@@ -31,7 +31,9 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className={styles.element}>
-              <News/>
+              <div className={styles.news}>
+                <News/>
+              </div>
             </div>
             <div className={styles.element}>
                 <div>

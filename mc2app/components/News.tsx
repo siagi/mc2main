@@ -15,7 +15,7 @@ const News = () => {
       <div className={styles.list}>
           {sampledata && sampledata.map((item,index)=>{
               return(
-                    <div key={index}>
+                    <div key={index} className={styles.newscontainer}>
                         <div>
                             {item.photo && 
                                 <Image src={item.photo as string} layout={'intrinsic'} width={item.width} height={item.height} className={styles.image}/>

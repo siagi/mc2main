@@ -88,6 +88,28 @@
   justify-items: center;
 }
 
+.news{
+  padding-right: 0.4rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 90vh;
+  &::-webkit-scrollbar{
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #BDFF00;
+    border-radius: 1rem;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: #000;
+    border-radius: 1rem;
+  }
+}
+
+
 // .footer {
 //   display: flex;
 //   flex: 1;
