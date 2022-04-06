@@ -17,6 +17,9 @@ const Bim:FunctionComponent = () => {
          <div style={{color:'white'}}>
          From the small stuff to the big picture, organizes the work so teams know what to do, why it matters, and how to get it done.
          </div>
+         <div>
+           <button>asd</button>
+         </div>
             
       </div>
   )
