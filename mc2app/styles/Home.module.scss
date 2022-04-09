@@ -23,6 +23,12 @@
   width: 100%;
   height: 100%;
   padding-top: 3rem;
+  animation: fadein 1s ease-in;
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 }
 
 .boxbackground{

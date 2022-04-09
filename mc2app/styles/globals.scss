@@ -7,9 +7,12 @@ body {
   background: linear-gradient(90deg, #FFF 15%, #F2F2F2 28%,#3e8ecc 40%, #00508C 50%, #000000 90%);
   background-size: 100% 100%;
   height: 100vh;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   scroll-behavior:smooth;
   scroll-snap-type: y mandatory;
+  &::-webkit-scrollbar{
+    width: 0.0rem;
+  }
 }
 
 // @keyframes gradient {
