@@ -13,13 +13,15 @@ const Home: NextPage = () => {
 
   const [background,setBackground] = useState(false);
   const [showAbout,setShowAbout] = useState<boolean>(false);
-  const about = useRef(null);
+  const about = useRef<HTMLDivElement>(null);
   const services = useRef(null);
   const projects = useRef(null);
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
-      if(window.pageYOffset === about.current.scrollHeight ) {
-        setShowAbout(true);
+      if(about.current){
+        if(window.pageYOffset === about.current.scrollHeight ) {
+          setShowAbout(true);
+        }
       }
     })
   })
