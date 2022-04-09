@@ -17,14 +17,14 @@ const Home: NextPage = () => {
   const services = useRef(null);
   const projects = useRef(null);
   useEffect(()=>{
+    console.log(window.pageYOffset);
+    console.log(about?.current?.scrollHeight)
     window.addEventListener('scroll',()=>{
-      if(about.current){
-        if(window.pageYOffset === about.current.scrollHeight ) {
+        if(window.pageYOffset >= about?.current?.scrollHeight ) {
           setShowAbout(true);
-        }
       }
     })
-  })
+  },[])
 
   return (
     <div>
