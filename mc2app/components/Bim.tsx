@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react'
 import styles from '../styles/Bim.module.scss'
+import StandardButton from './Buttons/StandardButton'
 
 
 const Bim:FunctionComponent = () => {
@@ -17,8 +18,9 @@ const Bim:FunctionComponent = () => {
          <div style={{color:'white'}}>
          From the small stuff to the big picture, organizes the work so teams know what to do, why it matters, and how to get it done.
          </div>
-         <div>
-           <button>asd</button>
+         <div className={styles.buttons_container}>
+           <StandardButton text='Get started' type='outline'/>
+           <StandardButton text='Learn more' type='solid'/>
          </div>
             
       </div>

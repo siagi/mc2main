@@ -6,3 +6,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.buttons_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
