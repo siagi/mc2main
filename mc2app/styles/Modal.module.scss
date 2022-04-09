@@ -1,0 +1,20 @@
+.container{
+    background-color: #fff;
+    position: fixed;
+    border: dashed 1px #004377;
+    z-index: 50;
+    transform: translateX(200px);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 15%;
+    // &::before{
+    //     content: "";
+    //     border-top: dashed 1px #004377;
+    //     height: 1px;
+    //     width:148px;
+    //     left: -140px;
+    //     top:-1px;
+    //     position: absolute;
+    //     z-index: 999;
+    // }
+}
