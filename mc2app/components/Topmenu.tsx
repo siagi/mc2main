@@ -7,11 +7,10 @@ const Topmenu:FunctionComponent = () => {
       <div className={styles.container}>
           <a href="#news" className={styles.element}>News</a>
           <a href="#about" className={styles.element}>About</a>
-          <div className={styles.element}>Services</div>
-          <div className={styles.element}>Projects</div>
-          <div className={styles.element}>Career</div>
-          <div className={styles.element}>Contact</div>
-            
+          <a href="#services" className={styles.element}>Services</a>
+          <a href="#projects" className={styles.element}>Projects</a>
+          <a href="#career" className={styles.element}>Career</a>
+          <a href="#contact" className={styles.element}>Contact</a>  
       </div>
   )
 }

@@ -85,6 +85,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+      <section id='services' className={styles.container}>
+        Services
+      </section>
+      <section id='projects' className={styles.container}>
+        projects
+      </section>
+      <section id='career' className={styles.container}>
+        career
+      </section>
+      <section id='contact' className={styles.container}>
+        contact
+      </section>
     </div>
   )
 }
