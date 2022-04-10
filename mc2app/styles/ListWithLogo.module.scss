@@ -22,13 +22,6 @@
     display: flex;
     color:#004377;
     column-gap: 0.5rem;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: all 0.2s ease-in-out;
-
-    &:hover{
-        cursor: pointer;
-        transform:translateX(10px);
-    }
 
     // &:hover::before{
     //     content: 'asdasd';
@@ -40,5 +33,11 @@
     flex-wrap: wrap;
     width: 180px;
     gap:0.3rem;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        transform:translateX(10px);
+    }
 }
 
