@@ -172,6 +172,116 @@ const projectsdata = [
             'water, sewage and heating connections'
         ]
     },
+    {
+        _id:'9',
+        name:'Budynek Biurowy Wadowicka, Kraków',
+        description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
+        buildingType:'Residential building',
+        localization:'ul. Wadowicka, Kraków, Poland',
+        architect:'JRK72',
+        surface:4000,
+        projectStage:'Building and detailed design',
+        years:'2018-2019',
+        buildingStatus:'In progress',
+        picture:'http://mc2projekty.pl/wp-content/uploads/2018/11/TK_GH_1-1024x749.jpg',
+        projectScope:[
+            'heating installation',
+            'cooling installation',
+            'installation of mechanical ventilation',
+            'water, sewage and hot utility water installations',
+            'heat and cold source technology',
+            'fire ventilation system - pressure differential system',
+            'water, sewage and heating connections'
+        ]
+    },
+    {
+        _id:'10',
+        name:'Budynek Biurowy Wadowicka, Kraków',
+        description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
+        buildingType:'Residential building',
+        localization:'ul. Wadowicka, Kraków, Poland',
+        architect:'JRK72',
+        surface:4000,
+        projectStage:'Building and detailed design',
+        years:'2018-2019',
+        buildingStatus:'In progress',
+        picture:'http://mc2projekty.pl/wp-content/uploads/2019/11/Lema_1-1024x570.jpg',
+        projectScope:[
+            'heating installation',
+            'cooling installation',
+            'installation of mechanical ventilation',
+            'water, sewage and hot utility water installations',
+            'heat and cold source technology',
+            'fire ventilation system - pressure differential system',
+            'water, sewage and heating connections'
+        ]
+    },
+    {
+        _id:'11',
+        name:'Budynek Biurowy Wadowicka, Kraków',
+        description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
+        buildingType:'Residential building',
+        localization:'ul. Wadowicka, Kraków, Poland',
+        architect:'JRK72',
+        surface:4000,
+        projectStage:'Building and detailed design',
+        years:'2018-2019',
+        buildingStatus:'In progress',
+        picture:'http://mc2projekty.pl/wp-content/uploads/2019/11/Cracovia.Tenis_.II_01-1024x771.jpg',
+        projectScope:[
+            'heating installation',
+            'cooling installation',
+            'installation of mechanical ventilation',
+            'water, sewage and hot utility water installations',
+            'heat and cold source technology',
+            'fire ventilation system - pressure differential system',
+            'water, sewage and heating connections'
+        ]
+    },
+    {
+        _id:'12',
+        name:'Budynek Biurowy Wadowicka, Kraków',
+        description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
+        buildingType:'Residential building',
+        localization:'ul. Wadowicka, Kraków, Poland',
+        architect:'JRK72',
+        surface:4000,
+        projectStage:'Building and detailed design',
+        years:'2018-2019',
+        buildingStatus:'In progress',
+        picture:'http://mc2projekty.pl/wp-content/uploads/2019/11/Chopin_1-1024x626.jpg',
+        projectScope:[
+            'heating installation',
+            'cooling installation',
+            'installation of mechanical ventilation',
+            'water, sewage and hot utility water installations',
+            'heat and cold source technology',
+            'fire ventilation system - pressure differential system',
+            'water, sewage and heating connections'
+        ]
+    },
+    {
+        _id:'13',
+        name:'Budynek Biurowy Wadowicka, Kraków',
+        description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
+        buildingType:'Residential building',
+        localization:'ul. Wadowicka, Kraków, Poland',
+        architect:'JRK72',
+        surface:4000,
+        projectStage:'Building and detailed design',
+        years:'2018-2019',
+        buildingStatus:'In progress',
+        picture:'http://mc2projekty.pl/wp-content/uploads/2019/11/Hala-Pr%C3%B3szk%C3%B3w-1024x576.jpg',
+        projectScope:[
+            'heating installation',
+            'cooling installation',
+            'installation of mechanical ventilation',
+            'water, sewage and hot utility water installations',
+            'heat and cold source technology',
+            'fire ventilation system - pressure differential system',
+            'water, sewage and heating connections'
+        ]
+    },
 ]
 
 module.exports = projectsdata

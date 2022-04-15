@@ -12,3 +12,7 @@ export type Project = {
     picture:string,
     projectScope:string[]
 }
+
+export type Children = {
+    children:React.ReactNode
+}
