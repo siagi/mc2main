@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width:20%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.list{
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+.headline{
+    display: flex;
+}
+.image{
+    border-radius: 1rem;
+}
+.detailed{
+    padding-top: 3rem;
+}
