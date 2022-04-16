@@ -7,4 +7,36 @@
     height: 100%;
     background-color: black;
     z-index: 50;
+    display: flex;
+    justify-content: center;
+}
+
+.project_information{
+    background-color: #F2F2F2;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 1rem;
+    margin-top: 10vh;
+    overflow: hidden;
+}
+.project_details{
+    display: flex;
+}
+.project_image{
+    border-radius: 1rem;
+}
+.image_container{
+    padding: 3rem;
+}
+.information_container{
+    width: 40%;
+    padding: 3rem 3rem 3rem 0rem;
+}
+.information_field{
+    border-bottom: 1px dashed #CDCDCD;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
+.information_label{
+    padding-bottom: 5px;
 }

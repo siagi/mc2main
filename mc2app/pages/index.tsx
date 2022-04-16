@@ -139,7 +139,21 @@ const Home: NextPage = () => {
         <Projects items={projectsdata}/>
       </section>
       <section id='career' className={styles.container}>
-        career
+        <div className={styles.career}>
+          <div className={styles.career_1}>
+              <p>Design of Heating, Ventilation, and Air Conditioning Installations in 2D and BIM</p>
+              <p>Our design office started operating in 2001. Initially, these were simple projects related to the executive department. Gradually, however, we were transforming into an independent design office as a separate and independent company. The next step was the growing specialization and more advanced studies.</p>
+          </div>
+          <div className={styles.career_2}>
+            <div className={styles.career_3}>
+             
+            </div>
+            <div className={styles.career_4}>
+              <div>Join our Team</div>
+              <div>We love clever things</div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id='contact' className={styles.container}>
         contact
