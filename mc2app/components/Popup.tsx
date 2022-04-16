@@ -27,6 +27,16 @@ const Popup = ({id, close}:{id:string, close:(arg:boolean)=>void}) => {
                                 setNWidth(naturalWidth); setNHeight(naturalHeight)
                             }
                         } placeholder='blur'  blurDataURL={'/photos/loader2.jpg'}/>
+                        <div className={styles.map_container}>
+                            <iframe
+                                className={styles.iframe_container}
+                                width={nWidth || 300}
+                                height="300"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC--QeOdat_eQKyPVYs5y5D5sX-eRC0BEA&q=${detailedProject.localization}`}>
+                                </iframe>
+                        </div>
                     </div>
                     <div className={styles.information_container}>
                         <div className={styles.information_field}><div className={styles.information_label}>Name: </div>{detailedProject.name}</div>
