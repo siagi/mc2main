@@ -26,7 +26,7 @@ const Popup = ({id, close}:{id:string, close:(arg:boolean)=>void}) => {
                                 const {naturalWidth, naturalHeight} = target as HTMLImageElement;
                                 setNWidth(naturalWidth); setNHeight(naturalHeight)
                             }
-                        } placeholder='blur'  blurDataURL={'/photos/loader1.jpg'}/>
+                        } placeholder='blur'  blurDataURL={'/photos/loader2.jpg'}/>
                     </div>
                     <div className={styles.information_container}>
                         <div className={styles.information_field}><div className={styles.information_label}>Name: </div>{detailedProject.name}</div>
