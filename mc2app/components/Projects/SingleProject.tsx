@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from 'react'
+import { FunctionComponent, useEffect, useState } from 'react'
 import Image from 'next/image'
 import logo from '../public/logomc2.svg'
 import sampledata from '../../sampledata/news.js'
@@ -16,6 +16,13 @@ import Popup from '../Popup'
 
 const SingleProject = ({item}:{item:Project}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
+  useEffect(()=>{
+    if(showModal){
+      document.body.style.overflow = 'hidden'
+    }else{
+      document.body.style.overflow = 'unset'
+    }
+  },[showModal])
 
   const router = useRouter();
 
@@ -28,7 +35,7 @@ const SingleProject = ({item}:{item:Project}) => {
               <Popup id={item._id} close={setShowModal}/>
             }
           </div>
-          <div className={styles.image}><Image src={item.picture} width={350} height={220} className={styles.image}/></div>
+          <div className={styles.image}><Image src={item.picture} alt={'image'} width={350} height={220} className={styles.image}/></div>
           <div>{item.description}</div>
       </div>
   )

@@ -24,10 +24,11 @@
     &::-webkit-scrollbar{
         width: 0.4rem;
         border-radius: 1rem;
+        background-color: #000;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #CDCDCD;
+        background: #BDFF00;
         border-radius: 1rem;
         
     }
