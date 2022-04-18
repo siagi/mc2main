@@ -18,9 +18,11 @@ const SingleProject = ({item}:{item:Project}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   useEffect(()=>{
     if(showModal){
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
     }else{
       document.body.style.overflow = 'unset'
+      document.body.style.position = '';
     }
   },[showModal])
 

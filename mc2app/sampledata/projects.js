@@ -265,7 +265,7 @@ const projectsdata = [
         name:'Budynek Biurowy Wadowicka, Kraków',
         description:'We were responsible for designing all HVAC installations and sanitary installations inside and outside the building.',
         buildingType:'Residential building',
-        localization:'ul. Wadowicka, Kraków, Poland',
+        localization:'ul. Mala Gora 14B, Kraków, Poland',
         architect:'JRK72',
         surface:4000,
         projectStage:'Building and detailed design',

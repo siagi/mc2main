@@ -148,10 +148,10 @@ const Home: NextPage = () => {
             <div className={styles.career_3}>
              
             </div>
-            <div className={styles.career_4}>
+            {/* <div className={styles.career_4}>
               <div>Join our Team</div>
               <div>We love clever things</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
