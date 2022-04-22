@@ -10,6 +10,7 @@ import YouTube from "react-youtube";
 import { useEffect, useRef, useState } from 'react'
 import Projects from '../components/Projects/Projects'
 import projectsdata from '../sampledata/projects'
+import ImagesWithNames from '../components/ImagesWithNames'
 const Home: NextPage = () => {
 
   const [background,setBackground] = useState(false);
@@ -156,7 +157,8 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section id='contact' className={styles.container}>
-        contact
+        aaa
+        <ImagesWithNames/>
       </section>
     </div>
   )

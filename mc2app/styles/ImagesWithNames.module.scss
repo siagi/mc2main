@@ -1,0 +1,516 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    padding-top: 4rem;
+    display: flex;
+    width: 60vw;
+    gap: 0.2rem;
+    // background-color: black;
+    justify-content: center;
+}
+.container_first{
+    border-radius: 0.7rem;
+    display: flex;
+    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+
+    &:hover{
+        transform:scale(1.01);
+        margin: 0.4rem;
+        outline: dashed 1px;
+        outline-offset: 0.25rem;
+    }
+   
+    // background-position: 0;
+    // background-size: cover;
+    // width: 15vw;
+    height: 60vh;
+}
+.container_second{
+    border-radius: 0.7rem;
+    display: flex;
+    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+    &:hover{
+        transform:scale(1.01);
+        margin: 0.4rem;
+        outline: dashed 1px;
+        outline-offset: 0.25rem;
+    }
+    // background-position: -15vw;
+    // background-size: cover;
+    // width: 15vw;
+    height: 60vh;
+}
+.container_third{
+    border-radius: 0.7rem;
+    display: flex;
+    transition: all 0.25s cubic-bezier(.86,.29,.27,.88) ;
+    &:hover{
+        transform:scale(1.01);
+        margin: 0.4rem;
+        outline: dashed 1px;
+        outline-offset: 0.25rem;
+    }
+    // background-position:  -30vw;
+    // background-size: cover;
+    // width: 15vw;
+    height: 60vh;
+}
+.container_fourth{
+    border-radius: 0.7rem;
+    display: flex;
+    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+    &:hover{
+        transform:scale(1.01);
+        margin: 0.4rem;
+        outline: dashed 1px;
+        outline-offset: 0.25rem;
+    }
+    // background-position: -45vw;
+    // background-size: cover;
+    // width: 15vw;
+    height: 60vh;
+}
+
+.label{
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: 5rem;
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+}
+
+// .container{
+//     width: 72.2vw;
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     background-image: url('/photos/autocad.png');
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;;
+//         &>div{
+//             background-color: black;
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             height: 0vh;
+//             animation-name: example;
+//             animation-duration: 0.7s;
+//             animation-fill-mode: forwards;
+//         }
+//     };
+
+// .container_projects{
+//     width: 72.2vw;
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             // background-image: url('/photos/loader4.jpg');
+//            background-repeat: no-repeat;
+//             // background-attachment: fixed;
+//             transition: all .2s ease-in-out;
+//             // transform: scale(1.0)
+            
+//             // background-color: rgb(89, 253, 0);
+//             // background-size:auto;
+//             // background-attachment: fixed;
+//             // animation-name: example;
+//             // animation-duration: 0.7s;
+//             // animation-fill-mode: forwards;
+//             // border: 1px dashed black;
+//             // animation-name: example;
+//             // animation-duration: 0.7s;
+//             // animation-fill-mode: forwards;
+//             &:nth-child(1){
+               
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-image: url('/photos/loader7.jpg');
+//                 background-size:100vw;
+//                 background-position: 0%;
+//                 transform-origin: bottom;
+//                 animation-delay: 0.10;
+//                 // animation-fill-mode: forwards;
+//                 // transform-origin: center;
+//             }
+//             &:nth-child(2){
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-image: url('/photos/loader7.jpg');
+//                 transform-origin: top left;
+//                 animation-delay: 0.13;
+//                 background-size:100vw;
+//                 background-position: 25%;
+//                 // animation-fill-mode: forwards;
+//                 // transform-origin: center;
+//             }
+//             &:nth-child(3){
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-image: url('/photos/loader7.jpg');
+//                 transform-origin: bottom left;
+//                 animation-delay: 0.16;
+//                 background-size:100vw;
+//                 background-position: 50%;
+//                 // animation-fill-mode: forwards;
+//                 // transform-origin: center;
+//             }
+//             &:nth-child(4){
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-image: url('/photos/loader7.jpg');
+//                 background-size:100vw;
+//                 background-position: 75%;
+//                 transform-origin: top left;
+//                 animation-delay: 0.19;
+//                 // animation-fill-mode: forwards;
+//                 // transform-origin: center;
+//             }
+//         }
+//         // &>div:hover{
+//         //     transform: scale(2.1);
+//         // }
+// };
+
+// .container_invest{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             background-color: rgb(204, 16, 16);
+//             // background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             animation-name: example;
+//             animation-duration: 0.7s;
+//             animation-fill-mode: forwards;
+//             // transition: background-image 0.5s ease-in-out;
+//             // animation-name: example;
+//             // animation-duration: 0.7s;
+//             // animation-fill-mode: forwards;
+//             // &:nth-child(1){
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.1s;
+//             //     animation-fill-mode: forwards;
+              
+//             // }
+//             // &:nth-child(2){
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.13s;
+//             //     animation-fill-mode: forwards;
+               
+//             // }
+//             // &:nth-child(3){
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.16s;
+//             //     animation-fill-mode: forwards;
+               
+//             // }
+//             // &:nth-child(4){
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.2s;
+//             //     animation-fill-mode: forwards;
+               
+//             // }
+//         }
+// };
+// .container_engineer{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;;
+//     opacity: 1;
+//         &>div{
+//             // border: 1px dashed black;
+//             // animation-name: example;
+//             // animation-duration: 0.7s;
+//             // animation-fill-mode: forwards;
+            
+//             // border: 1px dashed black;
+//             // // animation-name: example;
+//             // // animation-duration: 0.7s;
+//             // background: url('/photos/loader4.jpg');
+//             // // background-size: cover;
+//             // // background-attachment: fixed;
+//             // overflow: hidden;
+//             // // animation-fill-mode: forwards;
+//             height: 60vh;
+//             background-image: url('/photos/loader4.jpg');
+//             background-size:cover;
+//             background-attachment: fixed;
+//             &:nth-child(1){
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-color: blue;
+//                 // background-position: -75%;
+//             }
+//             &:nth-child(2){
+               
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-color: blue;
+//                 // background-attachment: fixed;
+//                 // background-image: url('/photos/loader4.jpg');
+//                 // background-size:100%;
+//                 // background-color: rgb(0, 255, 170);
+//             }
+//             &:nth-child(3){
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-color: blue;
+//                 // background-attachment: fixed;
+//                 // background-image: url('/photos/loader4.jpg');
+//                 // background-size:100%;
+//                 // background-color: rgb(0, 255, 170);
+//                 // background-position: -25%;
+//             }
+//             &:nth-child(4){
+               
+//                 animation-name: example;
+//                 animation-duration: 0.7s;
+//                 animation-fill-mode: forwards;
+//                 background-color: blue;
+//                 // background-attachment: fixed;
+//                 // background-image: url('/photos/loader4.jpg');
+//                 // background-size:100%;
+//                 // background-color: rgb(0, 255, 170);
+
+//             }
+//         }
+// };
+// .container_service{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;;
+//         &>div{
+//             background-color: rgb(251, 0, 146);
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             animation-name: example;
+//             animation-duration: 0.7s;
+//             animation-fill-mode: forwards;
+//             // &:nth-child(1){
+//             //     height: 100%;
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.1s;
+//             // }
+//             // &:nth-child(2){
+//             //     height: 100%;
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.3s;
+//             // }
+//             // &:nth-child(3){
+//             //     height: 100%;
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.6s;
+//             // }
+//             // &:nth-child(4){
+//             //     height: 100%;
+//             //     animation-name: example;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.9s;
+//             // }
+//         }
+// };
+// .container_off{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             background-color: black;
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             // height: 100%;
+//             animation-name: exampleoff;
+//             animation-duration: 0.7s;
+//             // animation-delay: -1s;
+//         }
+// };
+// .container_projects_off{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             background-color: rgb(89, 253, 0);
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             // height: 100%;
+//             animation-name: exampleoff;
+//             animation-duration: 0.7s;
+//             // animation-delay: -1s;
+//         }
+// };
+
+// .container_invest_off{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             background-color: rgb(204, 16, 16);
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             // height: 100%;
+//             animation-name: exampleoff;
+//             animation-duration: 0.7s;
+//             // animation-delay: -1s;
+//         }
+// };
+// .container_engineer_off{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             transform-origin: bottom right;
+//             border: 1px dashed black;
+//             animation-name: exampleoff;
+//             animation-duration: 0.7s;
+//             // animation-name: example;
+//             // animation-duration: 0.7s;
+//             // animation-fill-mode: forwards;
+//             // height: 60vh;
+//             // &:nth-child(1){
+                
+//             //     animation-name: exampleoff;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0s;
+//             //     background: url('/photos/autocad.png');
+//             //     background-position: -75%;
+//             //     // background-size:cover;
+//             //     // background-attachment:local;
+//             // }
+//             // &:nth-child(2){
+                
+//             //     animation-name: exampleoff;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.15s;
+//             //     background: url('/photos/autocad.png');
+//             //     background-position: -50%;
+//             // }
+//             // &:nth-child(3){
+                
+//             //     animation-name: exampleoff;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.3s;
+//             //     background: url('/photos/autocad.png');
+//             //     background-position: -25%;
+//             // }
+//             // &:nth-child(4){
+               
+//             //     animation-name: exampleoff;
+//             //     animation-duration: 0.7s;
+//             //     animation-delay: 0.4s;
+//             //     background: url('/photos/autocad.png');
+//             //     background-position: 0%;
+//             // }
+//         }
+// };
+// .container_service_off{
+//     width: 72.2vw;
+//     background-image: url('/photos/autocad.png');
+//     padding-top: 3rem;
+//     display: grid;
+//     grid-template-columns: 18vw 18vw 18vw 18vw;
+//     height: 60vh;
+//     gap:0.1rem;
+//     transition: background-image 5s ease-in-out;
+//     opacity: 1;
+//     transition: opacity 5s ease-in-out;
+//         &>div{
+//             background-color: rgb(251, 0, 146);
+//             background-size:auto;
+//             background-attachment: fixed;
+//             border: 1px dashed black;
+//             transition: background-image 0.5s ease-in-out;
+//             // height: 100%;
+//             animation-name: exampleoff;
+//             animation-duration: 0.7s;
+//             // animation-delay: -1s;
+//         }
+// };
+
+
+// @keyframes example {
+//     0%   {transform: scale(0.0);}
+//     100% {transform: scale(1.0);}
+//   }
+//   @keyframes exampleoff {
+//     0%   {transform: scale(1.0)}
+//     100% {transform: scale(0.0)}
+//   }
