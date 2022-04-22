@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useRef, useState } from 'react'
+import { FunctionComponent, MutableRefObject, useEffect, useRef, useState } from 'react'
 import styles from '../styles/ImagesWithNames.module.scss'
 import StandardButton from './Buttons/StandardButton'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import logo from '../public/logomc2.svg'
 
 
 const ImagesWithNames:FunctionComponent = () => {
-    const container = useRef(null);
+    const container = useRef<HTMLDivElement>(null);
     const [active,setActive] = useState<string>('container');
     const [off,setOff] = useState<string>('container_off')
 
@@ -19,20 +19,23 @@ const ImagesWithNames:FunctionComponent = () => {
     }
 
     const setStyle = (img:string) =>{
-       [...container.current.children].forEach((item,index)=>{
-            const xMove = 15*index;
-            item.style.background = img;
-            item.style.backgroundSize = "cover";
-            item.style.width = '15vw'
-            item.style.backgroundPosition = `-${xMove}vw`;
-        })
+        if(container.current && container.current.children !== null){
+            const items = Array.from(container.current.children) as HTMLDivElement[]
+            items.forEach((item,index)=>{
+                 const xMove = 15*index;
+                 item.style.background = img;
+                 item.style.backgroundSize = "cover";
+                 item.style.width = '15vw'
+                 item.style.backgroundPosition = `-${xMove}vw`;
+             })
+        }
     }
 
     const startImage = "url('/photos/main2.jpg')"
 
     useEffect(()=>{
         document.addEventListener('mousemove',(e)=>{
-            if(e.target.id !== 'main_container' && e.target.id !== 'container')setStyle(startImage);
+            if((e.target as Element).id !== 'main_container' && (e.target as Element).id !== 'container')setStyle(startImage);
         })
         if(container){
             setStyle(startImage);
