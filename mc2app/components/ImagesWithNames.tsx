@@ -25,7 +25,7 @@ const ImagesWithNames:FunctionComponent = () => {
                  const xMove = 15*index;
                  item.style.background = img;
                  item.style.backgroundSize = "cover";
-                 item.style.width = '15vw'
+                 item.style.width = '17.5vw'
                  item.style.backgroundPosition = `-${xMove}vw`;
              })
         }

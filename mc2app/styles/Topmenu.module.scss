@@ -12,6 +12,12 @@
     background-color: rgba($color: #000000, $alpha: 1.0);
     border-bottom: solid #BDFF00 1px;
     
+    
+}
+.sub_container{
+    padding-right: 1rem;
+    display: flex;
+    gap: 1.5rem;
 }
 .element{
     cursor:pointer;
@@ -29,4 +35,29 @@
         text-decoration: none;
     }
 
+}
+
+.set{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-bottom: 0.3rem;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    height: 2rem;
+    top: 2rem;
+    left: 0%;
+}
+  
+.header{
+font-size: 6rem;
+font-style: normal;
+font-weight: 700;
+color:#000;
+
+}
+.subheader{
+font-weight: 700;
+font-size: 2rem;
+color:#000;
 }

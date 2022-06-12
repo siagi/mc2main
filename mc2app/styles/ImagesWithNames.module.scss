@@ -1,9 +1,9 @@
 .main{
     display: flex;
     justify-content: center;
+    height: 52vh;
 }
 .container{
-    padding-top: 4rem;
     display: flex;
     width: 60vw;
     gap: 0.2rem;
@@ -11,26 +11,28 @@
     justify-content: center;
 }
 .container_first{
+    cursor: pointer;
     border-radius: 0.7rem;
     display: flex;
-    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+    transition: all 0.2s cubic-bezier(.86,.29,.27,.88);
 
     &:hover{
         transform:scale(1.01);
         margin: 0.4rem;
-        outline: dashed 1px;
+        outline: dashed 1px ;
         outline-offset: 0.25rem;
     }
    
     // background-position: 0;
     // background-size: cover;
     // width: 15vw;
-    height: 60vh;
+    height: 50vh;
 }
 .container_second{
+    cursor: pointer;
     border-radius: 0.7rem;
     display: flex;
-    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+    transition: all 0.2s cubic-bezier(.86,.29,.27,.88);
     &:hover{
         transform:scale(1.01);
         margin: 0.4rem;
@@ -40,12 +42,13 @@
     // background-position: -15vw;
     // background-size: cover;
     // width: 15vw;
-    height: 60vh;
+    height: 50vh;
 }
 .container_third{
+    cursor: pointer;
     border-radius: 0.7rem;
     display: flex;
-    transition: all 0.25s cubic-bezier(.86,.29,.27,.88) ;
+    transition: all 0.2s cubic-bezier(.86,.29,.27,.88) ;
     &:hover{
         transform:scale(1.01);
         margin: 0.4rem;
@@ -55,12 +58,13 @@
     // background-position:  -30vw;
     // background-size: cover;
     // width: 15vw;
-    height: 60vh;
+    height: 50vh;
 }
 .container_fourth{
+    cursor: pointer;
     border-radius: 0.7rem;
     display: flex;
-    transition: all 0.25s cubic-bezier(.86,.29,.27,.88);
+    transition: all 0.2s cubic-bezier(.86,.29,.27,.88);
     &:hover{
         transform:scale(1.01);
         margin: 0.4rem;
@@ -70,16 +74,18 @@
     // background-position: -45vw;
     // background-size: cover;
     // width: 15vw;
-    height: 60vh;
+    height: 50vh;
 }
 
 .label{
     color: #fff;
     margin-top: auto;
     margin-bottom: 5rem;
-    padding: 1rem;
+    padding: 0.4rem;
     background-color: rgba(0,0,0,0.7);
     width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 // .container{

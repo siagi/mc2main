@@ -24,7 +24,7 @@ const News = () => {
                         <div className={styles.dataAndTitle}>
                         
                             <div className={styles.data}>
-                                <span><Image src={calendar} height={18} width={18}/></span>
+                                <span><Image src={calendar} height={16} width={16}/></span>
                                 <span>{item.data}</span>
                             </div>
                             <div className={styles.descriptionTitle}>

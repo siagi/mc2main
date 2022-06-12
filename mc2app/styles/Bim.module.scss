@@ -1,7 +1,7 @@
 .container{
-    background: rgba(219, 0, 255, 0.3);
+    background: rgba(219, 0, 255, 1.0);
+    background: linear-gradient(45deg, #000000 15%, #000000 32%,#ab2c7f 40%, #c1088c 50%, #ff00ae 90%);
     border-radius: 1rem;
-    margin-left: 1rem;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -12,4 +12,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
+}
+.small_typo{
+    font-size: 1.5rem;
+    margin-top: auto;
 }

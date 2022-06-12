@@ -7,9 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   Router.events.on('routeChangeStart', () => console.log('start')); 
   Router.events.on('routeChangeComplete', () =>console.log('complete')); 
   return(
-    <Layout>
-      <Component {...pageProps}/>
-    </Layout>
+    <Component {...pageProps}/>
   ) 
 }
 
