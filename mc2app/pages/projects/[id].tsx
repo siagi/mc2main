@@ -4,15 +4,15 @@ import projectsdata from '../../sampledata/projects'
 import { Project } from '../../types/types';
 import { useEffect, useState } from 'react';
 
-const DetailedProject = () => {
+const DetailedProject = ({data}:{data:typeof projectsdata}) => {
     const [detailedProject,setDetailedProject] = useState<Project>();
     const router = useRouter();
     const id = router.query;
 
     useEffect(()=>{
-        const proj = projectsdata.find(item => item._id === id.id);
+        const proj = data.find(item => item._id === id.id);
         setDetailedProject(proj);
-    },[id])
+    },[data, id])
 
 
 
@@ -30,5 +30,15 @@ const DetailedProject = () => {
       </div>
   )
 }
+
+export async function getServerSideProps() {
+    console.log('here');
+  
+    const a:typeof projectsdata = projectsdata;
+    const data = a;
+    return {
+      props: {data}, // will be passed to the page component as props
+    }
+  }
 
 export default DetailedProject

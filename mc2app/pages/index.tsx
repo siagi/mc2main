@@ -13,13 +13,18 @@ import projectsdata from '../sampledata/projects'
 import ImagesWithNames from '../components/ImagesWithNames'
 import logo from '../public/logomc2.svg';
 import Layout from '../components/Layout'
-const Home: NextPage = () => {
-
+import path from 'path'
+import axios from 'axios'
+const Home = () => {
+ 
   const [background,setBackground] = useState(false);
   const [showAbout,setShowAbout] = useState<boolean>(false);
   const about = useRef<HTMLDivElement>(null);
   const services = useRef(null);
   const projects = useRef(null);
+
+  const [news, setNews] = useState<Array<any>>();
+
   useEffect(()=>{
     console.log(window.pageYOffset);
     console.log(about?.current?.scrollHeight)
@@ -30,6 +35,16 @@ const Home: NextPage = () => {
       }
       }
     })
+  },[])
+
+  useEffect(()=>{
+    const news = async () => {
+      const res = await fetch('/api/getAllNews');
+      const data = await res.json();
+      console.log('DATA',data);
+      setNews(data.news.reverse());
+    }
+    news();
   },[])
 
   return (
@@ -48,7 +63,7 @@ const Home: NextPage = () => {
               </div>
             </div>
               <div className={styles.group}>
-                <Image src={logo} width={60} height={60} className={styles.image_group}/>
+                <Image src={logo} width={60} height={60} className={styles.image_group} alt={'Image'}/>
                 <div className={styles.typo_group}>MC2 GROUP:</div>
               </div>
                 <ImagesWithNames/>
@@ -56,7 +71,7 @@ const Home: NextPage = () => {
               <div className={styles.main}>
                 <div className={styles.element}>
                   <div className={styles.news}>
-                    <News/>
+                    <News data={news || []}/>
                   </div>
                 </div>
                 <div className={styles.element}>
@@ -180,5 +195,16 @@ const Home: NextPage = () => {
     </Layout>
   )
 }
+
+// export async function getServerSideProps() {
+  
+//   const res = await fetch('/api/getAllNews');
+//   const data = await res.json();
+
+
+//   return {
+//     props: {data}, // will be passed to the page component as props
+//   }
+// }
 
 export default Home

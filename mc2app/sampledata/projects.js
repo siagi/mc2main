@@ -10,7 +10,7 @@ const projectsdata = [
         projectStage:'Building and detailed design',
         years:'2017-2019',
         buildingStatus:'In progress',
-        picture:'http://mc2projekty.pl/wp-content/uploads/2019/11/Pod-Fortem-1-1024x682.jpg',
+        picture:'https://drive.google.com/uc?id=1qMjuuP-fS2l3i98JZF_rPIcV96EAxOVo',
         projectScope:[
             'heating',
             'mechanical ventilation',

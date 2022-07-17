@@ -19,7 +19,7 @@ export default function handler(
     logWithCode(data.code, ()=>console.log('loginnn..'))
   
     // res.status(200).json({codePass:'success'})
-    res.redirect('/dashboard/dashboard');
+    res.redirect('/dashboard/addNews');
 
 
 }

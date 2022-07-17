@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import logo from '../public/logomc2.svg'
 import sampledata from '../sampledata/news.js'
@@ -10,22 +10,32 @@ import calendar from '../public/calendaricon.svg'
 
 
 
-const News = () => {
-  return (
-      <div className={styles.list}>
-          {sampledata && sampledata.map((item,index)=>{
+const News = ({data}:{data:any[]}) => {
+    const [elWidth, setElWidth] = useState<number>();
+    const el = useRef(null);
+    useEffect(()=>{
+        if(el.current){
+            setElWidth((el.current as HTMLElement).offsetWidth)
+        }
+    },[el])
+    return (
+      <div className={styles.list} ref={el}>
+          {data && data.reverse().map((item,index)=>{
               return(
                     <div key={index} className={styles.newscontainer}>
                         <div>
+                            {console.log('element',el)}
                             {item.photo && 
-                                <Image src={item.photo as string} layout={'intrinsic'} width={item.width} height={item.height} className={styles.image}/>
+                                // <Image src={item.photo as string} objectFit={'contain'} width={600} height={600/(16/9)} className={styles.image} alt='image'/>
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img src={item.photo} width={elWidth} className={styles.image} alt={item.name}/>
                             }
                         </div>
                         <div className={styles.dataAndTitle}>
                         
                             <div className={styles.data}>
-                                <span><Image src={calendar} height={16} width={16}/></span>
-                                <span>{item.data}</span>
+                                <span><Image src={calendar} height={16} width={16} alt='iconCalendar'/></span>
+                                <span>{item.date}</span>
                             </div>
                             <div className={styles.descriptionTitle}>
                                 {item.name}

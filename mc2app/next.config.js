@@ -5,6 +5,6 @@ module.exports = {
     bodyParser: false,
   },
   images: {
-    domains: ['mc2projekty.pl'],
+    domains: ['mc2projekty.pl','drive.google.com'],
   },
 }
