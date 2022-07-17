@@ -38,13 +38,12 @@ const Home = () => {
   },[])
 
   useEffect(()=>{
-    const news = async () => {
+    async () => {
       const res = await fetch('/api/getAllNews');
       const data = await res.json();
-      console.log('DATA',data);
-      setNews(data.news.reverse());
+      const news = data.news.reverse();
+      setNews(news);
     }
-    news();
   },[])
 
   return (

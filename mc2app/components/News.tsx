@@ -20,11 +20,10 @@ const News = ({data}:{data:any[]}) => {
     },[el])
     return (
       <div className={styles.list} ref={el}>
-          {data && data.reverse().map((item,index)=>{
+          {data && data.map((item,index)=>{
               return(
                     <div key={index} className={styles.newscontainer}>
                         <div>
-                            {console.log('element',el)}
                             {item.photo && 
                                 // <Image src={item.photo as string} objectFit={'contain'} width={600} height={600/(16/9)} className={styles.image} alt='image'/>
                                 // eslint-disable-next-line @next/next/no-img-element
