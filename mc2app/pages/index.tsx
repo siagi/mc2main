@@ -24,8 +24,16 @@ const Home = () => {
   const projects = useRef(null);
 
   const [news, setNews] = useState<Array<any>>();
+  const [projectsList, setProjectsList] = useState<Array<any>>();
 
   useEffect(()=>{
+    const getProjects = async() => {
+      const res = await fetch('/api/getAllProjects');
+      const data = await res.json();
+      const p = data.projects.reverse();
+      console.log('PP',p);
+      setProjectsList(p)
+    }
     const getSomeNews = async () => {
       const res = await fetch('/api/getAllNews');
       const data = await res.json();
@@ -33,6 +41,7 @@ const Home = () => {
       setNews(newsList);
     }
     getSomeNews();
+    getProjects();
   },[])
 
   useEffect(()=>{
@@ -165,7 +174,7 @@ const Home = () => {
         </div>
         <div className={styles.main_container}>
           <section ref={projects} id='projects' className={styles.container}>
-            <Projects items={projectsdata}/>
+            <Projects items={projectsList}/>
           </section>
         </div>
         <div className={styles.main_container}>

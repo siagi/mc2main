@@ -14,7 +14,7 @@ import Popup from '../Popup'
 
 
 
-const SingleProject = ({item}:{item:Project}) => {
+const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   useEffect(()=>{
     if(showModal){
@@ -34,7 +34,7 @@ const SingleProject = ({item}:{item:Project}) => {
             <span>{item.name}</span>
             <button onClick={()=> setShowModal(true)}>More</button>
             {showModal && 
-              <Popup id={item._id} close={setShowModal}/>
+              <Popup id={item._id} close={setShowModal} data={data}/>
             }
           </div>
           <div className={styles.image}><Image src={item.picture} alt={'image'} width={350} height={220} className={styles.image}/></div>

@@ -6,11 +6,11 @@ import projectsdata from '../sampledata/projects'
 import Image from 'next/image'
 
 
-const Popup = ({id, close}:{id:string, close:(arg:boolean)=>void}) => {
+const Popup = ({id, data,close}:{id:string, data:any[],close:(arg:boolean)=>void}) => {
 
     const [detailedProject, setDetailedProject] = useState<Project>();
     useEffect(()=>{
-        setDetailedProject(projectsdata.find(item=> item._id === id))
+        setDetailedProject(data.find(item=> item._id === id))
     },[])
 
     const [nWidth, setNWidth] = useState<number>();

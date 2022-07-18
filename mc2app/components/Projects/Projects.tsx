@@ -19,7 +19,7 @@ const Projects = ({items}:{items:Project[]}) => {
   return (
       <div className={styles.list}>
         {items && items.map(item=>{
-          return <SingleProject item={item} key={item._id}/>
+          return <SingleProject item={item} key={item._id} data={items}/>
         })}
       </div>
   )

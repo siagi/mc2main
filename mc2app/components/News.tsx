@@ -23,6 +23,7 @@ const News = ({data}:{data:any[]}) => {
     useEffect(()=>{
         handleResize();
         window.addEventListener('resize', handleResize)
+
     },[el])
     return (
       <div className={styles.list} ref={el} >
