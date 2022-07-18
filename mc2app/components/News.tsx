@@ -11,15 +11,21 @@ import calendar from '../public/calendaricon.svg'
 
 
 const News = ({data}:{data:any[]}) => {
+    console.log('here33')
+    console.log('Data33',data)
     const [elWidth, setElWidth] = useState<number>();
     const el = useRef(null);
-    useEffect(()=>{
+    const handleResize = () => {
         if(el.current){
             setElWidth((el.current as HTMLElement).offsetWidth)
         }
+    }
+    useEffect(()=>{
+        handleResize();
+        window.addEventListener('resize', handleResize)
     },[el])
     return (
-      <div className={styles.list} ref={el}>
+      <div className={styles.list} ref={el} >
           {data && data.map((item,index)=>{
               return(
                     <div key={index} className={styles.newscontainer}>

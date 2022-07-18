@@ -26,6 +26,16 @@ const Home = () => {
   const [news, setNews] = useState<Array<any>>();
 
   useEffect(()=>{
+    const getSomeNews = async () => {
+      const res = await fetch('/api/getAllNews');
+      const data = await res.json();
+      const newsList = data.news.reverse();
+      setNews(newsList);
+    }
+    getSomeNews();
+  },[])
+
+  useEffect(()=>{
     console.log(window.pageYOffset);
     console.log(about?.current?.scrollHeight)
     window.addEventListener('scroll',()=>{
@@ -37,14 +47,6 @@ const Home = () => {
     })
   },[])
 
-  useEffect(()=>{
-    async () => {
-      const res = await fetch('/api/getAllNews');
-      const data = await res.json();
-      const news = data.news.reverse();
-      setNews(news);
-    }
-  },[])
 
   return (
     <Layout>
