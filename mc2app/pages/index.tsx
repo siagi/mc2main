@@ -174,7 +174,7 @@ const Home = () => {
         </div>
         <div className={styles.main_container}>
           <section ref={projects} id='projects' className={styles.container}>
-            <Projects items={projectsList}/>
+            <Projects items={projectsList || []}/>
           </section>
         </div>
         <div className={styles.main_container}>
