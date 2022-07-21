@@ -32,13 +32,15 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
       <div className={styles.main}>
           <div className={styles.headline}>
             <span>{item.name}</span>
-            <button onClick={()=> setShowModal(true)}>More</button>
+            <span>
+              <button className={styles.button_more} onClick={()=> setShowModal(true)}>See details</button>
+            </span>
             {showModal && 
               <Popup id={item._id} close={setShowModal} data={data}/>
             }
           </div>
           <div className={styles.image}><Image src={item.picture} alt={'image'} width={350} height={220} className={styles.image}/></div>
-          <div>{item.description}</div>
+          <div>{item.description.length > 100 ? item.description.substring(0,100)+'...':item.description}</div>
       </div>
   )
 }

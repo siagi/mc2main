@@ -53,7 +53,7 @@ const Popup = ({id, data,close}:{id:string, data:any[],close:(arg:boolean)=>void
                             )
                         })}</ul></div>
                         
-                        <button onClick={()=>close(false)}>Back to projects</button>
+                        <button className={styles.button_close} onClick={()=>close(false)}>Back to projects</button>
                     </div>
                 </div>
               }

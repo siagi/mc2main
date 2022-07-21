@@ -33,6 +33,7 @@ const authorize = (handler:any) => {
       request = req.body as {data:string};
       data = request.data;
     }
+    console.log('here3333');
   
     function authorize(credentials: { web: { client_secret: string; client_id: string; redirect_uris: string[], project_id: string, auth_uri: string, token_uri: string, auth_provider_x509_cert_url: string  } }, callback: { (auth: any): void; (arg0: OAuth2Client): void }) {
   
@@ -40,6 +41,8 @@ const authorize = (handler:any) => {
         console.log('GT22',globalToken)
         fs.readFile(path.join(__dirname,'token.json'), (err, token) => {
           if (err) return getAccessToken(callback);
+          const checkToken = JSON.parse(token.toString());
+          console.log('CHECK TOKEN',checkToken);
           oAuth2Client.setCredentials(JSON.parse(token.toString()));
           handler(req,res);
           console.log('herree');
@@ -66,7 +69,7 @@ const authorize = (handler:any) => {
 
         console.log('here2')
         console.log('global token',globalToken)
-        authorize(credentails, ()=>console.log('login...'));
+      
       //load credentials from file
   
   
@@ -123,7 +126,9 @@ const authorize = (handler:any) => {
       
   //   }
   // }
+  authorize(credentails, ()=>console.log('login...'));
   }
+  
 }
 
 export const logWithCode = (code:any, callback:()=>void) => {

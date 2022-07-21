@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 import styles from '../styles/Topmenu.module.scss'
 import logo from '../public/logomc2.svg'
 import Image from 'next/image'
+import axios from 'axios'
 
 
 const Topmenu:FunctionComponent = () => {
@@ -18,10 +19,8 @@ const Topmenu:FunctionComponent = () => {
   }
 
   const getData = async() => {
-    const response = await fetch('/api/getFiles', {body:JSON.stringify({data:'getData'}), method:'POST',headers: {
-      'Content-Type': 'application/json'
- }})
- const result = await response.json() as {url:string};
+    const response =  await axios.post('/api/addMember');
+    const result = await response.data
     if(result){
       window.open(result.url,'_blank');
     }
@@ -32,13 +31,15 @@ const Topmenu:FunctionComponent = () => {
         <div className={styles.sub_container}>
           <a href="#news" className={styles.element}>News</a>
           <a href="#about" className={styles.element}>About</a>
+          <a href="#bim" className={styles.element}>BIM</a>
           <a href="#services" className={styles.element}>Services</a>
           <a href="#projects" className={styles.element}>Projects</a>
+          <a href="#team" className={styles.element}>Team</a>
           <a href="#career" className={styles.element}>Career</a>
           <a href="#contact" className={styles.element}>Contact</a>  
         </div>
-        <button onClick={getLogin}>Login</button>
-        <button onClick={getData}>Get data</button>
+        {/* <button onClick={getLogin}>Login</button> */}
+        <button className={styles.button_login} onClick={getData}>Login</button>
       </div>
   )
 }

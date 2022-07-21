@@ -61,3 +61,16 @@
     border-radius: 1rem;
     border: 1px dashed #CDCDCD;
 }
+.button_close{
+    margin-top: 1rem;
+    border-radius: 0.5rem;;
+    width: 10rem;
+    height: 2rem;
+    background-color:#BDFF00;
+    padding: 0.5rem;
+    border: none;
+    &:hover{
+        background-color:#000;
+        color: #BDFF00;
+    }
+}

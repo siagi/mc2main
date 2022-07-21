@@ -1,0 +1,21 @@
+.main{
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 2rem;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+.picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+.profile{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

@@ -15,6 +15,7 @@ import logo from '../public/logomc2.svg';
 import Layout from '../components/Layout'
 import path from 'path'
 import axios from 'axios'
+import Members from 'components/Members'
 const Home = () => {
  
   const [background,setBackground] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
 
   const [news, setNews] = useState<Array<any>>();
   const [projectsList, setProjectsList] = useState<Array<any>>();
+  const [membersList, setMembersList] = useState<Array<any>>();
 
   useEffect(()=>{
     const getProjects = async() => {
@@ -40,6 +42,13 @@ const Home = () => {
       const newsList = data.news.reverse();
       setNews(newsList);
     }
+    const getMembers = async () => {
+      const res = await fetch('/api/getAllMembers');
+      const data = await res.json();
+      const members = data.members.reverse();
+      setMembersList(members);
+    }
+    getMembers();
     getSomeNews();
     getProjects();
   },[])
@@ -127,6 +136,11 @@ const Home = () => {
             
           </section>
         </div>
+        <div className={styles.main_container}>
+          <section id='bim' className={styles.container}>
+           <div>BIM</div>
+          </section>
+        </div>
         <div className={styles.main_container}> 
           <section ref={services} id='services' className={styles.container}>
             <div className={styles.services}>
@@ -175,6 +189,13 @@ const Home = () => {
         <div className={styles.main_container}>
           <section ref={projects} id='projects' className={styles.container}>
             <Projects items={projectsList || []}/>
+          </section>
+        </div>
+        <div className={styles.main_container}>
+          <section id='team' className={styles.container}>
+            <div>
+                <Members data={membersList || []} />
+            </div>
           </section>
         </div>
         <div className={styles.main_container}>

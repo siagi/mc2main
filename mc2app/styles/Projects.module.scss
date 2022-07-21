@@ -6,11 +6,10 @@
     background-color: #fff;
     padding: 1rem;
     border-radius: 1rem;
-    align-items: center;
 }
 
 .list{
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     display: flex;
     gap: 1rem;
@@ -20,10 +19,24 @@
 }
 .headline{
     display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
 }
 .image{
     border-radius: 1rem;
 }
 .detailed{
     padding-top: 3rem;
+}
+.button_more{
+    border-radius: 0.5rem;;
+    width: 6rem;
+    height: 2rem;
+    background-color:#BDFF00;
+    padding: 0.5rem;
+    border: none;
+    &:hover{
+        background-color:#000;
+        color: #BDFF00;
+    }
 }
