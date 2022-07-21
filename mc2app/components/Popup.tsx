@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import { FunctionComponent, useEffect, useState } from 'react'
 import styles from '../styles/Popup.module.scss'
@@ -22,15 +23,15 @@ const Popup = ({id, data,close}:{id:string, data:any[],close:(arg:boolean)=>void
               {detailedProject && 
                 <div className={styles.project_details}>
                     <div className={styles.image_container}>
-                        <Image src={detailedProject.picture} width={nWidth || 600} height={nHeight || 300} className={styles.project_image} onLoad={({target})=>{
+                        <img src={detailedProject.picture} width={nWidth!*0.8 || 400} height={nHeight!*0.8 || 300} className={styles.project_image} onLoad={({target})=>{
                                 const {naturalWidth, naturalHeight} = target as HTMLImageElement;
                                 setNWidth(naturalWidth); setNHeight(naturalHeight)
                             }
-                        } placeholder='blur'  blurDataURL={'/photos/loader2.jpg'}/>
+                        } placeholder='blur' />
                         <div className={styles.map_container}>
                             <iframe
                                 className={styles.iframe_container}
-                                width={nWidth || 300}
+                                width={nWidth!*0.8 || 300}
                                 height="300"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
