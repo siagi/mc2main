@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import { FunctionComponent, useEffect, useState } from 'react'
+import { FunctionComponent, LegacyRef, useEffect, useRef, useState } from 'react'
 import styles from '../styles/Popup.module.scss'
 import { Children, Project } from '../types/types'
 import projectsdata from '../sampledata/projects'
@@ -9,28 +10,33 @@ import Image from 'next/image'
 const Popup = ({id, data,close}:{id:string, data:any[],close:(arg:boolean)=>void}) => {
 
     const [detailedProject, setDetailedProject] = useState<Project>();
-    useEffect(()=>{
-        setDetailedProject(data.find(item=> item._id === id))
-    },[])
-
+    const widthElement:LegacyRef<HTMLDivElement> = useRef(null)
     const [nWidth, setNWidth] = useState<number>();
-    const [nHeight, setNHeight] = useState<number>();
+    // const [nHeight, setNHeight] = useState<number>();
+
+    const setWidth = () => {
+        if(widthElement.current)setNWidth(widthElement.current.offsetWidth);
+    }
+
+
+    useEffect(()=>{
+        window.addEventListener('resize',setWidth)
+        setWidth();
+        setDetailedProject(data.find(item=> item._id === id))
+    },[widthElement])
+
 
   return (
       <div className={styles.container}>
-          <div className={styles.project_information}>
+          <div className={styles.project_information} ref={widthElement}>
               {detailedProject && 
                 <div className={styles.project_details}>
                     <div className={styles.image_container}>
-                        <Image src={detailedProject.picture} width={nWidth || 600} height={nHeight || 300} className={styles.project_image} onLoad={({target})=>{
-                                const {naturalWidth, naturalHeight} = target as HTMLImageElement;
-                                setNWidth(naturalWidth); setNHeight(naturalHeight)
-                            }
-                        } placeholder='blur'  blurDataURL={'/photos/loader2.jpg'}/>
+                        <img src={detailedProject.picture} width={nWidth!*0.6} className={styles.project_image} placeholder='blur' />
                         <div className={styles.map_container}>
                             <iframe
                                 className={styles.iframe_container}
-                                width={nWidth || 300}
+                                width={nWidth!*0.6}
                                 height="300"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"

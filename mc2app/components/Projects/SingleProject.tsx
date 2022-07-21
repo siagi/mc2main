@@ -1,4 +1,4 @@
-import { FunctionComponent, useEffect, useState } from 'react'
+import { FunctionComponent, LegacyRef, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import logo from '../public/logomc2.svg'
 import sampledata from '../../sampledata/news.js'
@@ -16,6 +16,15 @@ import Popup from '../Popup'
 
 const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
+  const widthElement:LegacyRef<HTMLDivElement> = useRef(null);
+  const [newWidth, setNewWidth] = useState<number>();
+  const setWidth = () => {
+    if(widthElement.current)setNewWidth(widthElement.current.offsetWidth)
+  }
+  useEffect(()=>{
+    setWidth();
+    window.addEventListener('resize',setWidth)
+  },[widthElement])
   useEffect(()=>{
     if(showModal){
       document.body.style.overflow = 'hidden';
@@ -30,7 +39,7 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
 
   return (
       <div className={styles.main}>
-          <div className={styles.headline}>
+          <div className={styles.headline} ref={widthElement}>
             <span>{item.name}</span>
             <span>
               <button className={styles.button_more} onClick={()=> setShowModal(true)}>See details</button>
@@ -39,7 +48,7 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
               <Popup id={item._id} close={setShowModal} data={data}/>
             }
           </div>
-          <div className={styles.image}><Image src={item.picture} alt={'image'} width={350} height={220} className={styles.image}/></div>
+          <div className={styles.image}><img src={item.picture} alt={'image'} width={newWidth} className={styles.image}/></div>
           <div>{item.description.length > 100 ? item.description.substring(0,100)+'...':item.description}</div>
       </div>
   )
