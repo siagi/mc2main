@@ -74,3 +74,20 @@ color:#000;
         color: #BDFF00;
     }
 }
+@media screen and (min-width:200px) and (max-width:600px) {
+    .element{
+        cursor:pointer;
+        font-size: 0.8rem;
+        font-weight:500;
+        color: white;
+        padding-right: 0.3rem;
+    }
+    .container{
+        width: 100vw;
+        justify-content: space-between;
+    }
+    .sub_container{
+        gap:0rem;
+        padding-right: rem;
+    }
+}
