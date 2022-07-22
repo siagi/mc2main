@@ -280,6 +280,37 @@
   .news{
     width: 90vw;
   }
+  .about{
+    padding-top: 3rem;
+    flex-direction: column;
+  }
+  .about_1{
+    width: 100vw;
+  }
+  .about_2{
+    width: 100vw;
+    border-left: none;
+    flex-direction: column;
+    p{
+      width:80vw;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+  .services{
+    flex-direction: column;
+
+  }
+  .services_1,
+  .services_2,
+  .services_3{
+    width: 88vw;
+    padding: 0.5rem;
+  }
+  .services_3{
+    padding-bottom: 4.5rem;
+  }
 }
 
 // .footer {

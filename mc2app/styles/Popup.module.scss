@@ -34,13 +34,14 @@
     }
 }
 .project_details{
-    display: flex;
+    display: grid;
+    grid-template-columns: 60vw 40vw
 }
 .project_image{
     border-radius: 1rem;
 }
 .image_container{
-    padding: 3rem;
+    margin: 3rem;
 }
 .information_container{
     width: 40%;
@@ -72,5 +73,27 @@
     &:hover{
         background-color:#000;
         color: #BDFF00;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:600px) {
+    .container{
+        width: 100vw;
+    }
+    .project_details{
+        display: flex;
+        flex-direction: column;
+    }
+    .information_container{
+        width: 70vw;
+        padding-left: 1rem;
+        padding-top: 0rem;
+    }
+    .iframe_container{
+        display: none;
+    }
+    .image_container{
+        width: 90%;
+        margin: 1rem;
     }
 }

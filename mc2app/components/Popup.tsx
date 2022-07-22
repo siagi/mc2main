@@ -15,33 +15,33 @@ const Popup = ({id, data,close}:{id:string, data:any[],close:(arg:boolean)=>void
     // const [nHeight, setNHeight] = useState<number>();
 
     const setWidth = () => {
-        if(widthElement.current)setNWidth(widthElement.current.offsetWidth);
+        if(widthElement.current)setNWidth(widthElement.current.clientWidth);
     }
 
 
     useEffect(()=>{
-        window.addEventListener('resize',setWidth)
-        setWidth();
         setDetailedProject(data.find(item=> item._id === id))
+        setWidth();
+        window.addEventListener('resize',setWidth)
     },[widthElement])
 
 
   return (
       <div className={styles.container}>
-          <div className={styles.project_information} ref={widthElement}>
+          <div className={styles.project_information}>
               {detailedProject && 
                 <div className={styles.project_details}>
-                    <div className={styles.image_container}>
-                        <img src={detailedProject.picture} width={nWidth!*0.6} className={styles.project_image} placeholder='blur' />
+                    <div className={styles.image_container} ref={widthElement}>
+                        <img src={detailedProject.picture} width="100%" className={styles.project_image} placeholder='blur' />
                         <div className={styles.map_container}>
                             <iframe
                                 className={styles.iframe_container}
-                                width={nWidth!*0.6}
+                                width="100%"
                                 height="300"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC--QeOdat_eQKyPVYs5y5D5sX-eRC0BEA&q=${detailedProject.localization}`}>
-                                </iframe>
+                            </iframe>
                         </div>
                     </div>
                     <div className={styles.information_container}>

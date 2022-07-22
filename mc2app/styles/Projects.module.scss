@@ -41,5 +41,19 @@
     }
 }
 .title{
-    height: 3em;
+    height: 3rem;
+}
+
+@media screen and (min-width:360px) and (max-width:600px) {
+    .list{
+        display: grid;
+        grid-template-columns: 100vw;
+    }
+    .main{
+        width: 90vw;
+        padding: 0.3rem;
+    }
+    .title{
+        height: 2rem;
+    }
 }
