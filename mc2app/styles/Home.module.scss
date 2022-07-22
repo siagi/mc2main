@@ -24,7 +24,7 @@
   flex-direction: column;
   // transition: background-color 2s ease-out;
   width: 60vw;
-
+  
 }
 
 
@@ -253,7 +253,34 @@
 .image_group{
   border-radius: 0.3rem;
 }
-
+@media screen and (min-width:200px) and (max-width:600px) {
+  .container{
+    display: flex;
+    width: 90vw;
+  }
+  .group{
+    width: 50vw;
+  }
+  .typo_group{
+    font-size: 1.5rem;
+  }
+  .subheader{
+    display: none;
+  }
+  .header{
+    display: none;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+  }
+  .element{
+    width: 100%;
+  }
+  .news{
+    width: 90vw;
+  }
+}
 
 // .footer {
 //   display: flex;

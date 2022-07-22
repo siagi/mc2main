@@ -88,6 +88,37 @@
     text-align: center;
 }
 
+@media screen and (min-width:200px) and (max-width:600px) {
+    .main{
+        display: flex;
+        justify-content: flex-start;
+        height: 12vh;
+    }
+    .container_fourth,
+    .container_first,
+    .container_third,
+    .container_second {
+        width: 22vw !important;
+        height: 10vh;
+    }
+    .label{
+        color: #fff;
+        margin-bottom: 1rem;
+        padding: 0.4rem;
+        background-color: rgba(0,0,0,0.7);
+        width: 100%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        width: 100vw;
+        gap: 0.2rem;
+        // background-color: black;
+        justify-content: flex-start;
+    }
+}
+
 // .container{
 //     width: 72.2vw;
 //     padding-top: 3rem;
