@@ -40,7 +40,7 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
   return (
       <div className={styles.main}>
           <div className={styles.headline} ref={widthElement}>
-            <span>{item.name}</span>
+            <div className={styles.title}>{item.name}</div>
             <span>
               <button className={styles.button_more} onClick={()=> setShowModal(true)}>See details</button>
             </span>
