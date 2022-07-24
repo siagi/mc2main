@@ -94,7 +94,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className={styles.element}>
-                    <div>
+                    <div className={styles.ytContainer}>
                       <YouTube videoId='ScVBPAitibQ' className={styles.youtube}/>
                       <YouTube videoId='uXG1y2bOufo' className={styles.youtube}/>
                       <YouTube videoId='UmWWZdJR1hQ' className={styles.youtube}/>
