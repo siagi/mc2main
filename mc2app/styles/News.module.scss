@@ -67,3 +67,9 @@
     scroll-snap-align: start;
   
   }
+
+  @media screen and (min-width:200px) and (max-width:600px) {
+    .list{
+        flex-wrap: nowrap;
+    }
+  }
