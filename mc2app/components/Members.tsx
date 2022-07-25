@@ -22,6 +22,7 @@ const Members = ({data}:{data:any}) => {
                         <div>
                             {item.name}
                         </div>
+                        <hr className={styles.hr}/>
                         <div>
                             {item.position}
                         </div>
