@@ -85,7 +85,7 @@
         flex-direction: column;
     }
     .information_container{
-        width: 70vw;
+        width: 85vw;
         padding-left: 1rem;
         padding-top: 0rem;
     }
@@ -100,5 +100,15 @@
         width: 95vw;
         height: 95vh;
         margin-top: 2vh;
+    }
+    .button_close{
+        font-weight: bold;
+        height: 2.5rem;
+        position:fixed;
+        bottom: 0%;
+        width: 100vw;
+        left: 0%;
+        border-bottom-left-radius:0%;
+        border-bottom-right-radius: 0%;
     }
 }
