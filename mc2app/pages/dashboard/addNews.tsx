@@ -1,6 +1,6 @@
 import AddNews from "../../components/Dashboard/AddNews"
 
-const Dashboard = ({text, type}:{text:string, type:string}) => {
+const addNews = ({text, type}:{text:string, type:string}) => {
   return (
       <div>
           <AddNews/>
@@ -8,4 +8,4 @@ const Dashboard = ({text, type}:{text:string, type:string}) => {
   )
 }
 
-export default Dashboard
+export default addNews

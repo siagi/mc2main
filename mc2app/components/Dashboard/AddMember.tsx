@@ -62,6 +62,7 @@ const AddMember = () => {
                 <option value="plumbing">Plumbing</option>
                 <option value="electric">Electric</option>
                 <option value="ceo">Ceo</option>
+                <option value="office">Office</option>
               </select>
             </label>
             <label>

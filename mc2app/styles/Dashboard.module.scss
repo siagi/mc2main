@@ -1,0 +1,19 @@
+.main{
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+}
+.button_side_menu{
+    padding: 5px;
+    height: 3rem;
+    background-color: #cfcfcf;
+    border: 0px;
+    &:hover{
+        background-color: #BDFF00;
+    }
+}
+.left_menu{
+    display: flex;
+    flex-direction: column;
+    border-right: #BDFF00 1px dashed;
+    height: 100vh;
+}
