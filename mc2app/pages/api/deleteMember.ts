@@ -83,6 +83,7 @@ const deleteMember = (
 
         const deleteMember = await collectionNews.deleteOne({_id:new ObjectId(formFields._id)});
         console.log('delete',deleteMember)
+        db.close();
         // const findMember = await collectionNews.findOne({_id:addMember.insertedId});
         // console.log('find News',findMember);
           

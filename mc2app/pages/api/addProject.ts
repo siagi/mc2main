@@ -99,6 +99,7 @@ const addProject = (
         const addedNews = await collectionNews.insertOne(newNews);
         console.log('Added news',addedNews);
         const findNews = await collectionNews.findOne({_id:addedNews.insertedId});
+        db.close();
         console.log('find News',findNews);
           
         } catch (error) {

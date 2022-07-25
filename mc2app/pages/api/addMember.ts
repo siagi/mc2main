@@ -91,6 +91,7 @@ const addMember = (
 
         const addMember = await collectionNews.insertOne(newMember);
         const findMember = await collectionNews.findOne({_id:addMember.insertedId});
+        db.close();
         console.log('find News',findMember);
           
         } catch (error) {

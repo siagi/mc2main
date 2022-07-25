@@ -13,6 +13,7 @@ export default async function getAllMembers(
     console.log('Connected to Mongo Database');
     const collectionNews = db.db('mc2main').collection('members');
     const allMembers = (await collectionNews.find().toArray())
+    db.close();
     res.status(200).json({members:allMembers});
   }
   

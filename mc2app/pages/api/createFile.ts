@@ -91,6 +91,7 @@ const addFiles = (
         console.log('Added news',addedNews);
         const findNews = await collectionNews.findOne({_id:addedNews.insertedId});
         console.log('find News',findNews);
+        db.close();
           
         } catch (error) {
           console.log('ERROR',error);

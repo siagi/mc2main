@@ -92,6 +92,7 @@ const editMember = (
 
         const edit = await collectionNews.updateOne({_id:new ObjectId(formFields._id)},{$set:editMember});
         console.log('Edit',edit)
+        db.close();
         // const findMember = await collectionNews.findOne({_id:addMember.insertedId});
         // console.log('find News',findMember);
           
