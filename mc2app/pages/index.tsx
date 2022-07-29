@@ -16,6 +16,7 @@ import Layout from '../components/Layout'
 import path from 'path'
 import axios from 'axios'
 import Members from 'components/Members'
+import ra from '../public/ra.svg'
 const Home = () => {
  
   const [background,setBackground] = useState(false);
@@ -31,14 +32,19 @@ const Home = () => {
   const [rightEdge, setRightEdge] = useState<number>();
   const [leftEdge, setLeftEdge] = useState<number>(0);
   const [scrollLeft, setScrollLeft] = useState<number>();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [disableLeft, setDisableLeft] = useState<boolean>(false);
+  const [disableRight, setDisableRight] = useState<boolean>(false);
 
   useEffect(()=>{
     const getProjects = async() => {
+      setLoading(true);
       const res = await fetch('/api/getAllProjects');
       const data = await res.json();
       const p = data.projects.reverse();
       console.log('PP',p);
       setProjectsList(p)
+      setLoading(false);
     }
     const getSomeNews = async () => {
       const res = await fetch('/api/getAllNews');
@@ -79,7 +85,6 @@ const Home = () => {
     if(newsList.current){
       newsList.current.scrollLeft -= newsList.current.offsetWidth
       setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
-      console.log(scrollLeft);
     }
   }
 
@@ -87,8 +92,8 @@ const Home = () => {
     if(newsList.current){
       newsList.current.scrollLeft += newsList.current.offsetWidth;
       setScrollLeft(newsList.current.scrollLeft += newsList.current.offsetWidth);
-      console.log('scroll left',scrollLeft);
     }
+    
   }
 
 
@@ -120,15 +125,21 @@ const Home = () => {
           <section id='news' className={styles.container}>
             <div className={styles.box}>
               <div className={styles.main}>
-                <div className={styles.element}>
-                  <div className={styles.element_news_button}>
-                    <button onClick={moveLeft} className={styles.button_active}>Left</button>
-                    <div className={styles.news} ref={newsList}>
-                      <News data={news || []}/>
-                    </div>
-                    <button onClick={moveRight} className={styles.button_active}>Right</button>
+                {!loading &&
+                <>
+                  <div className={styles.element_news}>
+                        <div className={styles.element_news_button}>
+                          <button onClick={moveLeft}><img src='/la.svg' className={styles.icon}/></button>
+                        </div>
+                      <div className={styles.news} ref={newsList}>
+                        <News data={news || []}/>
+                      </div>
+                      <div className={styles.element_news_button}>
+                          <button  onClick={moveRight}><img src='/ra.svg' className={styles.icon}/></button>
+                        </div>
                   </div>
-                </div>
+                </>
+                }
                 <div className={styles.element}>
                     <div className={styles.ytContainer}>
                       <YouTube videoId='ScVBPAitibQ' className={styles.youtube}/>

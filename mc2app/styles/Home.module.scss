@@ -68,18 +68,29 @@
 .element{
   width: 50%;
 }
+.element_news{
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  .icon{
+    width: 10px;
+  }
+   button{
+    border-radius: 1rem;
+    height: 80vh;
+    width: 1.2vw;
+    background-color: #fff;
+    border: 0;
+
+    &:hover{
+      background-color: #f3f3f3;
+    }
+   }
+}
 .element_news_button {
   display: flex;
-
-  .button_active{
-    background-color: #BDFF00;
-    border: 0;
-  }
-  .button_deactive{
-    display: none;
-    background-color: #BDFF00;
-    border: 0;
-  }
+  justify-content: space-between;
+  width: 100px;
 }
 
 .elementWithNews{

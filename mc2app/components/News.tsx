@@ -52,7 +52,6 @@ const News = ({data}:{data:any[]}) => {
                             {item.description}
                             
                         </div>
-                        <hr/>
                     </div>
                     
               )
