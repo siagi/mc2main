@@ -29,6 +29,7 @@ const Topmenu:FunctionComponent = () => {
   return (
       <div className={styles.container}>
         <div className={styles.sub_container}>
+          <a href="#home" className={styles.element}>Home</a>
           <a href="#news" className={styles.element}>News</a>
           <a href="#about" className={styles.element}>About</a>
           <a href="#bim" className={styles.element}>BIM</a>

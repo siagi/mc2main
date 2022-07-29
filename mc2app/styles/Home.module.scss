@@ -68,6 +68,20 @@
 .element{
   width: 50%;
 }
+.element_news_button {
+  display: flex;
+
+  .button_active{
+    background-color: #BDFF00;
+    border: 0;
+  }
+  .button_deactive{
+    display: none;
+    background-color: #BDFF00;
+    border: 0;
+  }
+}
+
 .elementWithNews{
   width: 50%;
   display: flex;
@@ -219,12 +233,13 @@
 .news{
   padding-right: 0.4rem;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-x: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  height: 90vh;
+  scroll-snap-type: x mandatory;
+  height: 80vh;
   &::-webkit-scrollbar{
-    width: 0.3rem;
+    width: 0.2rem;
+    height: 0.2rem;
   }
 
   &::-webkit-scrollbar-thumb {

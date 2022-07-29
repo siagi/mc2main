@@ -1,7 +1,7 @@
 .main{
     display: flex;
     justify-content: center;
-    height: 22vh;
+    height: 50vh;
 }
 .container{
     display: flex;
@@ -26,7 +26,7 @@
     // background-position: 0;
     // background-size: cover;
     // width: 15vw;
-    height: 20vh;
+    height: 48vh;
 }
 .container_second{
     cursor: pointer;
@@ -42,7 +42,7 @@
     // background-position: -15vw;
     // background-size: cover;
     // width: 15vw;
-    height: 20vh;
+    height: 48vh;
 }
 .container_third{
     cursor: pointer;
@@ -58,7 +58,7 @@
     // background-position:  -30vw;
     // background-size: cover;
     // width: 15vw;
-    height: 20vh;
+    height: 48vh;
 }
 .container_fourth{
     cursor: pointer;
@@ -74,7 +74,7 @@
     // background-position: -45vw;
     // background-size: cover;
     // width: 15vw;
-    height: 20vh;
+    height: 48vh;
 }
 
 .label{

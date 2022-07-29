@@ -7,7 +7,7 @@ import News from '../components/News'
 import Topmenu from '../components/Topmenu'
 import styles from '../styles/Home.module.scss'
 import YouTube from "react-youtube";
-import { useEffect, useRef, useState } from 'react'
+import { MutableRefObject, useEffect, useRef, useState } from 'react'
 import Projects from '../components/Projects/Projects'
 import projectsdata from '../sampledata/projects'
 import ImagesWithNames from '../components/ImagesWithNames'
@@ -23,10 +23,14 @@ const Home = () => {
   const about = useRef<HTMLDivElement>(null);
   const services = useRef(null);
   const projects = useRef(null);
+  const newsList= useRef<HTMLDivElement>(null);
 
   const [news, setNews] = useState<Array<any>>();
   const [projectsList, setProjectsList] = useState<Array<any>>();
   const [membersList, setMembersList] = useState<Array<any>>();
+  const [rightEdge, setRightEdge] = useState<number>();
+  const [leftEdge, setLeftEdge] = useState<number>(0);
+  const [scrollLeft, setScrollLeft] = useState<number>();
 
   useEffect(()=>{
     const getProjects = async() => {
@@ -65,32 +69,64 @@ const Home = () => {
     })
   },[])
 
+  useEffect(()=>{
+    if(newsList.current){
+      setRightEdge(newsList.current.scrollWidth)
+    }
+  },[newsList])
+
+  const moveLeft = () => {
+    if(newsList.current){
+      newsList.current.scrollLeft -= newsList.current.offsetWidth
+      setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
+      console.log(scrollLeft);
+    }
+  }
+
+  const moveRight = () => {
+    if(newsList.current){
+      newsList.current.scrollLeft += newsList.current.offsetWidth;
+      setScrollLeft(newsList.current.scrollLeft += newsList.current.offsetWidth);
+      console.log('scroll left',scrollLeft);
+    }
+  }
+
 
   return (
     <Layout>
       <div>
         <div className={styles.main_container}>
-          <section id='news' className={styles.container}>
+          <section id='home'  className={styles.container}>
             <div className={styles.box}>
-            <div className={styles.set}>
-              <div className={styles.header}>
-                {/* <button onClick={()=>console.log(about)}>aaa</button> */}
-                MEP
+              <div className={styles.set}>
+                <div className={styles.header}>
+                  {/* <button onClick={()=>console.log(about)}>aaa</button> */}
+                  MEP
+                </div>
+                <div className={styles.subheader}>
+                  Mechanical Electrical & Plumbing
+                </div>
               </div>
-              <div className={styles.subheader}>
-                Mechanical Electrical & Plumbing
-              </div>
-            </div>
-              <div className={styles.group}>
-                <Image src={logo} width={60} height={60} className={styles.image_group} alt={'Image'}/>
-                <div className={styles.typo_group}>MC2 GROUP:</div>
-              </div>
+                <div className={styles.group}>
+                  <Image src={logo} width={60} height={60} className={styles.image_group} alt={'Image'}/>
+                  <div className={styles.typo_group}>MC2 GROUP:</div>
+                </div>
                 <ImagesWithNames/>
                 <Bim/>
+            </div>
+          </section>
+        </div>
+        <div className={styles.main_container}>
+          <section id='news' className={styles.container}>
+            <div className={styles.box}>
               <div className={styles.main}>
                 <div className={styles.element}>
-                  <div className={styles.news}>
-                    <News data={news || []}/>
+                  <div className={styles.element_news_button}>
+                    <button onClick={moveLeft} className={styles.button_active}>Left</button>
+                    <div className={styles.news} ref={newsList}>
+                      <News data={news || []}/>
+                    </div>
+                    <button onClick={moveRight} className={styles.button_active}>Right</button>
                   </div>
                 </div>
                 <div className={styles.element}>
