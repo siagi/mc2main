@@ -209,10 +209,9 @@
 .set{
   display: flex;
   flex-direction: column;
-  left: 0%;
   top: 3rem;
+  transform: translateX(-210px);
   position: absolute;
-  width: 19vw;
 }
 
 .header{
@@ -221,10 +220,12 @@
   font-weight: 700;
   color:#7c7c7c;
   margin-top: auto;
+  margin-bottom: -1rem;
 }
 .subheader{
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
+  text-align: center;
   color:#7c7c7c;
 }
 
@@ -269,14 +270,14 @@
 }
 .typo_group{
   margin-top: auto;
-  font-size: 2.5rem;
+  font-size: 3.6rem;
   padding-left: 0.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: #004377;
 }
 .image_group{
-  border-radius: 0.3rem;
+  border-radius:1rem;
 }
 @media screen and (min-width:200px) and (max-width:600px) {
   .container{
@@ -285,6 +286,11 @@
   }
   .group{
     width: 50vw;
+  }
+  .element_news{
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
   }
   .typo_group{
     font-size: 1.5rem;
@@ -336,6 +342,8 @@
   .ytContainer{
     padding-bottom: 4rem;
     padding-top: 2rem;
+    height: 50vh;
+    overflow: hidden;
   }
   .youtube{
     width: 100%;

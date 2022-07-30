@@ -25,6 +25,7 @@ const Home = () => {
   const services = useRef(null);
   const projects = useRef(null);
   const newsList= useRef<HTMLDivElement>(null);
+  const mc2Logo = useRef<HTMLDivElement>(null)
 
   const [news, setNews] = useState<Array<any>>();
   const [projectsList, setProjectsList] = useState<Array<any>>();
@@ -76,6 +77,9 @@ const Home = () => {
   },[])
 
   useEffect(()=>{
+    if(mc2Logo.current){
+      console.log(mc2Logo)
+    }
     if(newsList.current){
       setRightEdge(newsList.current.scrollWidth)
     }
@@ -112,8 +116,8 @@ const Home = () => {
                   Mechanical Electrical & Plumbing
                 </div>
               </div>
-                <div className={styles.group}>
-                  <Image src={logo} width={60} height={60} className={styles.image_group} alt={'Image'}/>
+                <div className={styles.group} ref={mc2Logo}>
+                  <Image src={logo} width={70} height={70} className={styles.image_group} alt={'Image'}/>
                   <div className={styles.typo_group}>MC2 GROUP:</div>
                 </div>
                 <ImagesWithNames/>
@@ -126,7 +130,6 @@ const Home = () => {
             <div className={styles.box}>
               <div className={styles.main}>
                 {!loading &&
-                <>
                   <div className={styles.element_news}>
                         <div className={styles.element_news_button}>
                           <button onClick={moveLeft}><img src='/la.svg' className={styles.icon}/></button>
@@ -138,7 +141,6 @@ const Home = () => {
                           <button  onClick={moveRight}><img src='/ra.svg' className={styles.icon}/></button>
                         </div>
                   </div>
-                </>
                 }
                 <div className={styles.element}>
                     <div className={styles.ytContainer}>

@@ -1,11 +1,47 @@
 .main{
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    display: flex;
-    gap: 2rem;
+    padding-left: 1rem;
     padding-top: 4rem;
-    flex-wrap: wrap;
     padding-bottom: 5rem;
+    height: 70vh;
+    overflow: hidden;
+    overflow-x:scroll;
+    scroll-snap-align:center;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar{
+      height: 0.4rem;
+      background-color: #000;
+      border-radius: 0.3rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #BDFF00; 
+    }
+}
+.main3{
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+}
+.icon{
+    width: 10px;
+}
+.button{
+    padding: 0.2rem;
+    background-color: #fff;
+    border: 0;
+    height: 80vh;
+    border-radius: 0.5rem;
+    width: 1.2rem;
+    &:hover{
+        background-color: #f3f3f3;
+    }
+}
+.button_border_left{
+    border-left:1px dashed #d7d7d7
+}
+.button_border_right{
+    border-right:1px dashed #d7d7d7
 }
 .picture{
     width: 200px;
@@ -25,6 +61,16 @@
     border: 0;
     height: 0px;
     border-top: dashed 1px #BDFF00;
+}
+.container{
+    height: 70vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    
 }
 @media screen and (min-width:200px) and (max-width:600px) {
     .main{

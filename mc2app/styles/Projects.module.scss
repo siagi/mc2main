@@ -1,21 +1,72 @@
+.main3{
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+}
 .main{
     display: flex;
     flex-direction: column;
     gap:1rem;
-    width:20%;
-    background-color: #fff;
+    width:15vw;
+    height: 30vh;
+    background-color: none;
     padding: 1rem;
     border-radius: 1rem;
+    
+}
+
+.button{
+    padding: 0.2rem;
+    background-color: #fff;
+    border: 0;
+    height: 80vh;
+    border-radius: 0.5rem;
+    width: 1.2rem;
+    &:hover{
+        background-color: #f3f3f3;
+    }
+}
+    .button_border_left{
+        border-left:1px dashed #d7d7d7
+    }
+    .button_border_right{
+        border-right:1px dashed #d7d7d7
+    }
+.icon{
+    width: 10px;
 }
 
 .list{
     justify-content: flex-start;
-    flex-wrap: wrap;
-    display: flex;
     gap: 1rem;
     padding-top: 4rem;
-    flex-wrap: wrap;
     padding-bottom: 5rem;
+    height: 75vh;
+    overflow: hidden;
+    overflow-x:scroll;
+    scroll-snap-align:center;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar{
+      height: 0.4rem;
+      background-color: #000;
+      border-radius: 0.3rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #BDFF00; 
+    }
+}
+.container{
+    width: auto;
+    background-color: #fff;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 20vh 20vh;
+    gap: 2rem;
+    row-gap: 13rem;
+    
 }
 .headline{
     display: flex;
@@ -41,7 +92,6 @@
     }
 }
 .title{
-    height: 3rem;
     font-weight: bold;
 }
 

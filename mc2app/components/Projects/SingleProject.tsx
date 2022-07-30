@@ -40,15 +40,15 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
   return (
       <div className={styles.main}>
           <div className={styles.headline} ref={widthElement}>
-            <div className={styles.image}><img src={item.picture} alt={'image'} width={newWidth} className={styles.image}/></div>
+            <div className={styles.image}><img src={item.picture} alt={'image'} width={newWidth} height={newWidth!/1.5} className={styles.image}/></div>
             <div className={styles.title}>{item.name}</div>
             <div>{item.description.length > 100 ? item.description.substring(0,100)+'...':item.description}</div>
-            <span>
-              <button className={styles.button_more} onClick={()=> setShowModal(true)}>See details</button>
-            </span>
             {showModal && 
               <Popup id={item._id} close={setShowModal} data={data}/>
             }
+            <span>
+              <button className={styles.button_more} onClick={()=> setShowModal(true)}>See details</button>
+            </span>
           </div>
       </div>
   )

@@ -1,10 +1,21 @@
-.container{
+.container_first{
     background: rgba(219, 0, 255, 1.0);
     background: linear-gradient(45deg, #000000 15%, #000000 32%,#ab2c7f 40%, #c1088c 50%, #ff00ae 90%);
     border-radius: 1rem;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;;
+}
+
+.container_second{
+    background: rgba(219, 0, 255, 1.0);
+    background: linear-gradient(45deg, #000000 15%, #000000 32%,#2cab9a 40%, #08c1b2 50%, #00ffb3 90%);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;;
 }
 
 .buttons_container{
@@ -16,4 +27,9 @@
 .small_typo{
     font-size: 1.5rem;
     margin-top: auto;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }

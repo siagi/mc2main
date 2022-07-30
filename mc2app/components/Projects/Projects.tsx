@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useRef } from 'react'
 import Image from 'next/image'
 import logo from '../public/logomc2.svg'
 import sampledata from '../../sampledata/news.js'
@@ -15,13 +15,34 @@ import SingleProject from './SingleProject'
 
 const Projects = ({items}:{items:Project[]}) => {
 
+  const projectsList = useRef<HTMLDivElement>(null)
+  const moveLeft = () => {
+    if(projectsList.current){
+      projectsList.current.scrollLeft -= projectsList.current.offsetWidth
+    //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
+    }
+  }
+  const moveRight = () => {
+  if(projectsList.current){
+    projectsList.current.scrollLeft += projectsList.current.offsetWidth
+  //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
+  }
+  }
 
   return (
-      <div className={styles.list}>
-        {items && items.map(item=>{
-          return <SingleProject item={item} key={item._id} data={items}/>
-        })}
-      </div>
+    <div className={styles.main3}>
+        <button className={[styles.button, styles.button_border_right].join(" ")} onClick={moveLeft}><img src="/la.svg" className={styles.icon}/></button>
+          <div className={styles.list} ref={projectsList}>
+            <div className={styles.container}>
+              {items && items.map(item=>{
+                return (
+                      <SingleProject item={item} key={item._id} data={items}/>
+                )
+              })}
+            </div>
+          </div>
+        <button className={[styles.button, styles.button_border_left].join(" ")} onClick={moveRight}><img src="/ra.svg" className={styles.icon}/></button>
+    </div>
   )
 }
 
