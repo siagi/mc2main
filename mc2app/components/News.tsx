@@ -40,7 +40,7 @@ const News = ({data}:{data:any[]}) => {
                         <div className={styles.dataAndTitle}>
                         
                             <div className={styles.data}>
-                                <span><Image src={calendar} height={16} width={16} alt='iconCalendar'/></span>
+                                <div className={styles.icon}><Image src={calendar} alt='iconCalendar'/></div>
                                 <span>{item.date}</span>
                             </div>
                             <div className={styles.descriptionTitle}>

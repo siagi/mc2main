@@ -67,9 +67,37 @@
     scroll-snap-align: start;
   
   }
+  .icon{
+    height: 1.2rem;
+    width: 1.2rem;;
+  }
 
   @media screen and (min-width:200px) and (max-width:600px) {
     .list{
         flex-wrap: nowrap;
     }
+    .image{
+        display: none;
+    }
+    .icon{
+        height: 0.9rem;
+        width: 0.9rem;;
+      }
+    .dataAndTitle{
+        width: 100vw;
+    }
+    .description{
+        padding-right: 10vw;
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+    .data{
+        padding: 0rem;
+        font-size: 0.8rem;
+    }
+    .descriptionTitle{
+        font-size: 1rem;
+        padding-bottom: 0;
+    }
+
   }

@@ -127,17 +127,17 @@ const Home = () => {
         </div>
         <div className={styles.main_container}>
           <section id='news' className={styles.container}>
-            <div className={styles.box}>
+            <div className={styles.box_news}>
               <div className={styles.main}>
                 {!loading &&
                   <div className={styles.element_news}>
-                        <div className={styles.element_news_button}>
+                        <div className={styles.element_news_button_left}>
                           <button onClick={moveLeft}><img src='/la.svg' className={styles.icon}/></button>
                         </div>
                       <div className={styles.news} ref={newsList}>
                         <News data={news || []}/>
                       </div>
-                      <div className={styles.element_news_button}>
+                      <div className={styles.element_news_button_right}>
                           <button  onClick={moveRight}><img src='/ra.svg' className={styles.icon}/></button>
                         </div>
                   </div>
