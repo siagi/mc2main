@@ -30,7 +30,7 @@ const News = ({data}:{data:any[]}) => {
           {data && data.map((item,index)=>{
               return(
                     <div key={index} className={styles.newscontainer}>
-                        <div>
+                        <div className={styles.image_container}>
                             {item.photo && 
                                 // <Image src={item.photo as string} objectFit={'contain'} width={600} height={600/(16/9)} className={styles.image} alt='image'/>
                                 // eslint-disable-next-line @next/next/no-img-element
