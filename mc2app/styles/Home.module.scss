@@ -372,6 +372,16 @@
   }
 }
 
+@media screen and (min-width:360px) and (max-width:600px) and (max-height: 700px) {
+  .group{
+    display: flex;
+    padding-bottom: 0.3rem;
+  }
+  .box{
+    padding-top: 3.5rem;
+  }
+}
+
 // .footer {
 //   display: flex;
 //   flex: 1;
