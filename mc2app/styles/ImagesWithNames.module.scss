@@ -92,14 +92,21 @@
     .main{
         display: flex;
         justify-content: flex-start;
-        height: 12vh;
+        height: 22vh;
     }
     .container_fourth,
     .container_first,
     .container_third,
     .container_second {
+        border-radius: 0.7rem;
         width: 22vw !important;
-        height: 10vh;
+        height: 20vh;
+        &:hover{
+            transform:scale(1);
+            margin: 0.2rem;
+            outline: dashed 1px;
+            outline-offset: 0.15rem;
+        }
     }
     .label{
         color: #fff;
