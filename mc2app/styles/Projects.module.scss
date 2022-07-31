@@ -21,7 +21,7 @@
     border: 0;
     height: 80vh;
     border-radius: 0.5rem;
-    width: 1.2rem;
+    width: 20px;
     &:hover{
         background-color: #f3f3f3;
     }
@@ -39,7 +39,7 @@
 .list{
     justify-content: flex-start;
     gap: 1rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 5rem;
     height: 75vh;
     overflow: hidden;
@@ -95,9 +95,10 @@
     font-weight: bold;
 }
 
-@media screen and (min-width:360px) and (max-width:600px) {
+@media screen and (min-width:200px) and (max-width:600px) {
     .list{
         display: grid;
+        padding-top: 1rem;
         grid-template-columns: 100vw;
     }
     .main{
@@ -106,5 +107,8 @@
     }
     .title{
         height: 2rem;
+    }
+    .container{
+        display: flex;
     }
 }
