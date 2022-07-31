@@ -142,17 +142,19 @@ const Home = () => {
                         </div>
                   </div>
                 }
-                <div className={styles.element_youtube}>
-                    <div className={styles.ytContainer}>
-                      {['uXG1y2bOufo','UmWWZdJR1hQ'].map((item)=>{
-                        return(
-                          <div key={item} className={styles.youtube}>
-                            <YouTube videoId={item} className={styles.detail_youtube}/>
-                          </div>
-                        )
-                      })}
-                    </div>
-                </div>
+                {!loading && 
+                  <div className={styles.element_youtube}>
+                      <div className={styles.ytContainer}>
+                        {['uXG1y2bOufo','UmWWZdJR1hQ'].map((item)=>{
+                          return(
+                            <div key={item} className={styles.youtube}>
+                              <YouTube videoId={item} className={styles.detail_youtube}/>
+                            </div>
+                          )
+                        })}
+                      </div>
+                  </div>
+                }
               </div>
             </div>
           </section>
