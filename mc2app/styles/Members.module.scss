@@ -74,12 +74,35 @@
 }
 @media screen and (min-width:200px) and (max-width:600px) {
     .main{
+        width: 1fr;
+        // display: flex;
+        // flex-direction: row;
+        // // grid-template-columns: 1fr;
+        // // grid-template-rows: 1fr;
         justify-content: center;
         gap: 1rem;
         padding-top: 4rem;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding-bottom: 5rem;
         padding-top: 5rem;
+        overflow: hidden;
+        overflow-x:scroll;
+        scroll-snap-align:center;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    .container{
+        // height: 70vh;
+        width: auto;
+        background-color: #fff;
+        // display: flex;
+        // flex-wrap: nowrap;
+        // flex-direction: row;
+        gap: 2rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr 1fr 1fr;
+        
     }
     .picture{
         width: 5rem;
@@ -87,7 +110,7 @@
         margin-bottom: 0.5rem;
     }
     .profile{
-        width: 6rem;
+        width: 50vw;
         display: flex;
         flex-direction: column;
         text-align: center;

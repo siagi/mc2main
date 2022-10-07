@@ -39,13 +39,13 @@ const Members = ({data}:{data:any}) => {
 
     const moveLeft = () => {
         if(memberListElement.current){
-            memberListElement.current.scrollLeft -= memberListElement.current.offsetWidth
+            memberListElement.current.scrollLeft -= window.innerWidth
         //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
         }
       }
     const moveRight = () => {
     if(memberListElement.current){
-        memberListElement.current.scrollLeft += memberListElement.current.offsetWidth
+        memberListElement.current.scrollLeft += window.innerWidth
     //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
     }
     }
