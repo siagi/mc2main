@@ -18,13 +18,13 @@ const Projects = ({items}:{items:Project[]}) => {
   const projectsList = useRef<HTMLDivElement>(null)
   const moveLeft = () => {
     if(projectsList.current){
-      projectsList.current.scrollLeft -= projectsList.current.offsetWidth
+      projectsList.current.scrollLeft -= window.innerWidth
     //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
     }
   }
   const moveRight = () => {
   if(projectsList.current){
-    projectsList.current.scrollLeft += projectsList.current.offsetWidth
+    projectsList.current.scrollLeft += window.innerWidth
   //   setScrollLeft(newsList.current.scrollLeft -= newsList.current.offsetWidth);
   }
   }
