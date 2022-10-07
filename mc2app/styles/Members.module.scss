@@ -73,6 +73,11 @@
     
 }
 @media screen and (min-width:200px) and (max-width:600px) {
+    .main3{
+        display: flex;
+        padding-top: 2rem;
+        align-items: center;
+    }
     .main{
         width: 1fr;
         // display: flex;
@@ -81,10 +86,10 @@
         // // grid-template-rows: 1fr;
         justify-content: center;
         gap: 1rem;
-        padding-top: 4rem;
+        padding-top: 3rem;
         flex-wrap: nowrap;
         padding-bottom: 5rem;
-        padding-top: 5rem;
+        padding-top: 3rem;
         overflow: hidden;
         overflow-x:scroll;
         scroll-snap-align:center;
@@ -110,7 +115,7 @@
         margin-bottom: 0.5rem;
     }
     .profile{
-        width: 50vw;
+        width: 33vw;
         display: flex;
         flex-direction: column;
         text-align: center;
