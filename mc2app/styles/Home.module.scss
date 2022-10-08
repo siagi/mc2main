@@ -318,7 +318,7 @@ gap: 0.5rem;
   }
   .element_news{
     width: 100vw;
-    height: 40vh;
+    height: 55vh;
     overflow: hidden;
   }
   .typo_group{
@@ -370,7 +370,7 @@ gap: 0.5rem;
     padding-bottom: 4.5rem;
   }
   .ytContainer{
-    height: 40vh;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -378,11 +378,13 @@ gap: 0.5rem;
     overflow-x: scroll;
   }
   .youtube{
+    padding-top: 0.3rem;
     width: 90vw;
   }
   .detail_youtube{
+    border-radius: 1rem;
     width: 90vw;
-    height: 40vh;
+    height: 25vh;
   }
   .element_youtube{
     width: 100vw;
@@ -393,7 +395,7 @@ gap: 0.5rem;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
-    height: 40vh;
+    height: 55vh;
     &::-webkit-scrollbar{
       width: 0.3rem;
       height: 0.4rem;
