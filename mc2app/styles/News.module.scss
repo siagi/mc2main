@@ -88,7 +88,7 @@
     }
     .image_container {
         overflow: hidden;
-        max-height: 30vh;
+        max-height: 28vh;
         max-width: 86vw;
         border-radius: 1rem;
     }
@@ -111,7 +111,8 @@
         line-height: 1.1rem;
     }
     .data{
-        padding: 0rem;
+        padding-top: 0.4rem;
+        // padding: 0rem;
         font-size: 0.8rem;
     }
     .descriptionTitle{

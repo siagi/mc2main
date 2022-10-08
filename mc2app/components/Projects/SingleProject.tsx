@@ -40,7 +40,7 @@ const SingleProject = ({item, data}:{item:Project, data:any[]}) => {
   return (
       <div className={styles.main}>
           <div className={styles.headline} ref={widthElement}>
-            <div className={styles.image}><img src={item.picture} alt={'image'} width={newWidth} height={newWidth!/1.5} className={styles.image}/></div>
+            <div className={styles.image}><img src={item.picture} alt={'image'} width={newWidth} className={styles.image}/></div>
             <div className={styles.title}>{item.name}</div>
             <div>{item.description.length > 100 ? item.description.substring(0,100)+'...':item.description}</div>
             {showModal && 
