@@ -42,7 +42,7 @@
 .box_news{
   width: 100%;
   height: 100%;
-  padding-top: 4rem;
+  padding-top: 3.4rem;
   animation: fadein 1s ease-in;
 
   @keyframes fadein {
@@ -296,6 +296,9 @@ gap: 0.5rem;
 }
 .element_youtube{
   width: 50vw;
+}
+.detail_youtube{
+  border-radius: 1rem;
 }
 @media screen and (min-width:200px) and (max-width:600px) {
   .container{
